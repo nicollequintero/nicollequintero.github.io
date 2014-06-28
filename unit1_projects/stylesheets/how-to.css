@@ -1,0 +1,51 @@
+.heading {
+	height: 100px;
+	 background-color: red;
+	 margin-bottom: 10px;
+}
+
+.sidemenu {
+	width: 20%;
+	float:left;
+	background-color: blue;
+}
+
+.content {
+	/*margin-left: 200px;*/
+	float: right;
+	width: 79%;
+	background-color: green;
+	margin-bottom: 10px;
+}
+
+.stepnavigation {
+
+}
+
+.howtocontent td {
+
+	width: 175px
+}
+
+.howtocontent {
+	border-spacing: 100px
+}
+
+* {
+	border: 1px solid black;
+}
+
+.howtocontent img {
+	height: 5%;
+}
+
+.stepnavigation a:hover {
+	text-decoration: none;
+	background-color: gray;
+	color: white;
+}
+
+.footer {
+	width: 100%;
+	clear: both;
+}
