@@ -18,18 +18,8 @@ html {
 	margin-top: 100px;
 	margin-left: -10px;
 	width: 100%;
-	background-color: green;
+	background-image: url("http://nicollequintero.github.io/blog-posts/images/coverphoto.jpg");
 	position: fixed;
-}
-
-
-.footer {
-
-	width: 100%;
-	position: fixed;
-	margin-bottom: -10px;
-	height: 50px;
-	background-color: blue;
 }
 
 img {
