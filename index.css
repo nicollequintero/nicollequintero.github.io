@@ -15,10 +15,10 @@ html {
 
 .content {
 	
-	margin-top: 100px;
-	margin-left: -10px;
-	width: 100%;
-	background-image: url("http://nicollequintero.github.io/blog-posts/images/coverphoto.jpg");
+
+	width: auto;
+	height: auto;
+	background-color: green;
 	position: fixed;
 }
 
