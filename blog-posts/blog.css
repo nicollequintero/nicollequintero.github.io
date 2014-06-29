@@ -70,11 +70,11 @@ html {
 
 .sidemenu {
 	
-	height: 1200px;
 	width: 200px;
 	background-color: #cfc2bc;
 	float:right;
 	border-left: 3px double gray;
+	border-bottom: 3px double gray;
 
 	
 }
@@ -116,7 +116,6 @@ a:hover {
 }
 
 .content {
-	height: 1200px;
 	width:900px;
 	margin-top: 10px;
 	margin-right: auto;
