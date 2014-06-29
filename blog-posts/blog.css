@@ -1,8 +1,5 @@
 html {
-	/*background-image: url("http://2.bp.blogspot.com/-6LGe5b-kR-Y/T_Dy1W4u_DI/AAAAAAAASiQ/AhowLoajQ1U/s1600/garland+pattern+aqua2sm.jpg");*/
-	/*background-color: #56bad6;*/
 	background-image: url("http://static.freepik.com/free-photo/subtle-fabric-texture--background_19-135531.jpg");
-	
 }
 
 .heading {
@@ -19,7 +16,7 @@ html {
 	 text-align: center;
 	 color: white;
 	 padding: 0px;
-	 background-image: url("http://nicollequintero.github.io/blog-posts/images/multicolor.png");
+	 background-image: url("images/multicolor.png");
 		
 }
 
@@ -101,6 +98,20 @@ html {
 	text-align: center;
 	padding:3px;
 
+}
+
+.bloglink {
+	font-family: "Avenir";
+	color: white;
+	padding: 5px;
+}
+
+a {
+	color: white;
+}
+
+a:hover {
+	background-color: #000063;
 }
 
 .content {
