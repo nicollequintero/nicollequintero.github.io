@@ -1,0 +1,155 @@
+html {
+	/*background-image: url("http://2.bp.blogspot.com/-6LGe5b-kR-Y/T_Dy1W4u_DI/AAAAAAAASiQ/AhowLoajQ1U/s1600/garland+pattern+aqua2sm.jpg");*/
+	/*background-color: #56bad6;*/
+	background-image: url("http://static.freepik.com/free-photo/subtle-fabric-texture--background_19-135531.jpg");
+	
+}
+
+.heading {
+	 
+	 border: 0px solid #3753bf;
+	 height: 100px;
+	 width: 1000px;
+	 margin-top: 50px;
+	 margin-right: auto;
+	 margin-left: auto;
+	 background-color: #56bad6;
+	 font-family: fantasy;
+	 font-size: 65px;
+	 text-align: center;
+	 color: white;
+	 padding: 0px;
+	 background-image: url("file:///Users/nicollequintero/nicollequintero.github.io/unit1_projects/images/multicolor.png");
+		
+}
+
+.logo {
+	color: #c2a45d;
+	background: rgba(0, 0, 0, 0.6);
+	
+}
+
+
+.subheading {
+	height: 35px;
+	width: 1000px;
+	margin-right: auto;
+	margin-left: auto;
+	background-color: gray;
+	color: #e6dfd1;
+	font-family: "Avenir";
+
+}	
+
+.socialmedia {
+	float: right;
+}
+
+.subtitle {
+	float: left;
+}
+
+.circleborder {
+	height: 7px;
+	width: 10px;
+	margin-right: auto;
+	margin-left: auto;
+	margin-top: 0px;
+	border-radius: 100%;
+	background-color: #52433f;
+	display: inline-block;
+
+}
+
+.circlecontainer {
+	height: 25px;
+	width: 900px;
+	margin-right: auto;
+	margin-left: auto;
+	margin-top: 0px;
+	text-align: center;
+}
+
+
+.sidemenu {
+	
+	height: 1200px;
+	width: 200px;
+	background-color: #cfc2bc;
+	float:right;
+	border-left: 3px double gray;
+
+	
+}
+
+.abouttheauthor {
+	
+	height: 400px;
+	width: 200px;
+	background-color: red;
+
+}
+
+.centeredimage {
+	text-align: center;
+}
+
+#abouttext {
+	font-family: "Avenir";
+	color: #000063;
+	font-size: 12px;
+	text-align: center;
+	padding:3px;
+
+}
+
+.content {
+	height: 1200px;
+	width:900px;
+	margin-top: 10px;
+	margin-right: auto;
+	margin-left: auto;	
+	border-radius: 0px;
+	background-color: #e6dfd1;
+
+}
+
+h1 {
+	font-family: "Courier New";
+	color: #000063;
+	padding-left: 30px;
+	padding-top: 30px;
+}
+
+.entry {
+	font-family: "Courier New";
+	color: #000063;
+	font-size: 14px;
+	padding-left: 20px;
+}
+
+
+* {
+	border: 0px solid black;
+}
+
+
+.footer {
+	
+	width: 900px;
+	margin-right: auto;
+	margin-left: auto;
+	background-color: #ff7e3d;
+	text-align: right;
+	color: #e6dfd1;
+	font-family: Avenir;
+	font-size: 12px;
+	padding-right: 3px;
+
+}
+
+
+
+#twitter {
+	height: 5%;
+}

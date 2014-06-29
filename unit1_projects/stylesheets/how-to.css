@@ -1,51 +1,109 @@
 .heading {
-	height: 100px;
-	 background-color: red;
+	 
+	 border-radius: 15px;
+	 border: 5px solid #00CC99;
+	 background-color: white;
+	 height: 150px;
 	 margin-bottom: 10px;
+	 margin-top: -10px;
+	 position: fixed;
+	 z-index: 1;
+	 width: 98%;
+	 text-align: center;
+	 color: gray;
+	 font-family: Avenir;
+	
+}
+
+.heading h1 {
+
 }
 
 .sidemenu {
-	width: 20%;
+	
+	border-radius: 15px;
 	float:left;
-	background-color: blue;
+	width: 15%;
+	position: fixed;
+	margin-top: 170px;
+	font-family: Avenir;
+	
 }
 
 .content {
-	/*margin-left: 200px;*/
+	
+	border-radius: 15px;
 	float: right;
-	width: 79%;
-	background-color: green;
 	margin-bottom: 10px;
+	margin-top: 170px;
+	width: 84%;
+	font-family: Avenir;
 }
 
 .stepnavigation {
+	border-spacing: 20px;
+	text-align: center;
 
+}
+
+.howtocontent {
+	border-spacing: 30px;
 }
 
 .howtocontent td {
 
-	width: 175px
+	width: 33%;
+	padding: 5px;
+	border-radius: 0px;
 }
 
-.howtocontent {
-	border-spacing: 100px
+.howtocontent p {
+	text-align: center;
 }
+
 
 * {
-	border: 1px solid black;
+	border: 0px solid black;
 }
 
 .howtocontent img {
-	height: 5%;
+	height: 50%;
+	border: 3px solid #00CC99;
+}
+
+.centeredimage {
+
+	margin-bottom: 0px;
+	margin-top: 0px;
+	margin-right: auto;
+	margin-left: auto;
+	padding: 0;
+	height: 50%;
 }
 
 .stepnavigation a:hover {
 	text-decoration: none;
-	background-color: gray;
+	background-color: #00CC99;
 	color: white;
 }
 
+.stepnavigation a {
+	text-decoration: none;
+}
+
+#steptext {
+
+	border: 12px solid black;
+	border-spacing: 300px;
+}
+
+span {
+	color:red;
+}
+
 .footer {
-	width: 100%;
+
+	border-radius: 15px;
+	background-color: yellow;
 	clear: both;
 }
