@@ -1,5 +1,5 @@
 html {
-	background-color: black;
+	background-color: white;
 }
 
 .heading {
@@ -17,6 +17,5 @@ html {
 	
 	margin-top: 100px;
 	background-color: green;
-	position: fixed;
 }
 
