@@ -1,0 +1,54 @@
+html {
+	background-color: #FEFEFA;
+}
+
+.heading {
+	 
+	 height: 105px;
+	 margin-bottom: 10px;
+	 margin-top: -35px;
+	 position: fixed;
+	 z-index: 1;
+	 width: 99%;
+	 text-align: center;
+	 color: gray;
+	 font-family: Avenir;
+	 background-color: #FEFEFA;
+	
+}
+
+.subheading {
+	height: 50px;
+	width: 99%;
+	position: fixed;
+	margin-top: 70px;
+	background-color: #00CC99;
+	text-align: center;
+	color: white;
+	font-family: Avenir;
+}
+
+.content {
+	
+	height: 800px;
+	border-radius: 15px;
+	float: right;
+	margin-bottom: 10px;
+	margin-top: 170px;
+	width: 84%;
+	font-family: Avenir;
+	color:gray;
+}
+
+
+.footer {
+
+	height: 50px;
+	background-color: #ff7e3d;
+	clear: both;
+	text-align: right;
+	color: white;
+	font-family: Avenir;
+	font-size: 12px;
+}
+
