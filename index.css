@@ -4,18 +4,17 @@ html {
 
 .heading {
 	 
-	 height: 110px;
-	 margin-top: -10px;
+	 height: 50px;
 	 position: fixed;
 	 width: 100%;
-	 background-color: red;
+	 background-color: black;
 	
 }
 
 .content {
 	
 	margin-top: 100px;
-	background-color: green;
+	background-color: white;
 }
 
 p {
