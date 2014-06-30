@@ -1,0 +1,201 @@
+
+html {
+	background-image: url("http://static.freepik.com/free-photo/subtle-fabric-texture--background_19-135531.jpg");
+	height: 100%
+}
+
+.heading {
+	 
+	 border: 0px solid #3753bf;
+	 height: 100px;
+	 width: 1000px;
+	 margin-top: 50px;
+	 margin-right: auto;
+	 margin-left: auto;
+	 background-color: #56bad6;
+	 font-family: fantasy;
+	 font-size: 65px;
+	 text-align: center;
+	 color: white;
+	 padding: 0px;
+	 background-image: url("images/multicolor.png");
+		
+}
+
+.logo {
+	color: #e6dfd1;
+	background: rgba(0, 0, 0, 0.5);
+	
+}
+
+
+.subheading {
+	height: 35px;
+	width: 1000px;
+	margin-right: auto;
+	margin-left: auto;
+	background-color: gray;
+	color: #e6dfd1;
+	font-family: "Avenir";
+
+}	
+
+.socialmedia {
+	float: right;
+}
+
+.subtitle {
+	float: left;
+}
+
+.circleborder {
+	height: 7px;
+	width: 10px;
+	margin-right: auto;
+	margin-left: auto;
+	margin-top: 0px;
+	border-radius: 100%;
+	background-color: #52433f;
+	display: inline-block;
+
+}
+
+.circlecontainer {
+	height: 25px;
+	width: 906px;
+	margin-right: auto;
+	margin-left: auto;
+	margin-top: 0px;
+	text-align: center;
+}
+
+
+.contentcontainer	
+{
+	width: 906px;
+	margin-right: auto;
+	margin-left: auto;
+	margin-top: 10px;
+}
+
+.sidemenu {
+	
+	width: 200px;
+	background-color: #cfc2bc;
+	border: 3px double gray;
+	float: right;
+	
+}
+
+.abouttheauthor {
+	
+	height: 400px;
+	width: 200px;
+	background-color: red;
+
+}
+
+.centeredimage {
+	text-align: center;
+	
+}
+
+.centeredimage img {
+	border: 1px solid #52433f;
+}
+
+#abouttext {
+	font-family: "Avenir";
+	color: #000063;
+	font-size: 12px;
+	text-align: center;
+	padding:3px;
+
+}
+
+.bloglink {
+	font-family: "Avenir";
+	color: white;
+	padding: 5px;
+	text-align: center;
+}
+
+a {
+	color: white;
+}
+
+a:hover {
+	background-color: #000063;
+}
+
+.content {
+	width:700px;
+	margin-right: auto;
+	margin-left: auto;	
+	border-radius: 0px;
+	background-color: #e6dfd1;
+	padding-bottom: 30px;
+	float:left;
+
+}
+
+.entrytitle {
+	font-family: "Avenir";
+	font-size: 35px;
+	font-weight: bold;
+	color: #000063;
+	padding-left: 30px;
+	padding-top: 30px;
+	padding-bottom: 0px;
+}
+
+.entrytext {
+	font-family: "Avenir";
+	color: #000063;
+	font-size: 14px;
+	padding-left: 30px;
+	margin-right: 30px;
+}
+
+.entryheading {
+	font-family: "Avenir";
+	color: #000063;
+	font-size: 20px;
+	padding-left: 30px;
+	font-weight: bold;
+}
+
+.entrydate {
+	font-family: "Avenir";
+	color: #000063;
+	font-size: 12px;
+	padding-left: 30px;
+	font-style: italic;
+	font-weight: bold;
+}
+
+* {
+	border: 0px solid black;
+}
+
+
+.footer {
+	
+	width: 1000px;
+	margin-right: auto;
+	margin-left: auto;
+	background-color: #ff7e3d;
+	text-align: right;
+	color: #e6dfd1;
+	font-family: Avenir;
+	font-size: 12px;
+	padding-right: 3px;
+	clear: both;
+	margin-top: 100px;
+}
+
+
+
+#twitter {
+	height: 5%;
+}
