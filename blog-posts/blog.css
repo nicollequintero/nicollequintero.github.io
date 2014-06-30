@@ -46,6 +46,9 @@ html {
 
 .subtitle {
 	float: left;
+	margin-top: 5px;
+	margin-left: 5px;
+
 }
 
 .circleborder {
@@ -80,13 +83,16 @@ html {
 
 .sidemenu {
 	
+	position: fixed;
 	width: 200px;
 	background-color: #cfc2bc;
 	border: 3px double gray;
 	float: right;
+	margin-left: 700px;
 	
 }
 
+/*
 .abouttheauthor {
 	
 	height: 400px;
@@ -94,6 +100,7 @@ html {
 	background-color: red;
 
 }
+*/
 
 .centeredimage {
 	text-align: center;
