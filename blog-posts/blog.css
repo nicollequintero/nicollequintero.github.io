@@ -1,37 +1,46 @@
 
 html {
 	background-image: url("http://static.freepik.com/free-photo/subtle-fabric-texture--background_19-135531.jpg");
-	height: 100%;
+	
+}
+
+.container {
+	width = 90%;
+	max-width: 1000px;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+img {
+	max-width: 100%;
 }
 
 .heading {
 	 
 	 border: 0px solid #3753bf;
 	 height: 100px;
-	 width: 1000px;
+	 width: 100%;
 	 margin-top: 50px;
 	 margin-right: auto;
 	 margin-left: auto;
-	 background-color: #56bad6;
-	 font-family: fantasy;
-	 font-size: 4.06em;
-	 text-align: center;
-	 color: white;
 	 padding: 0px;
 	 background-image: url("images/multicolor.png");
+	 vertical-align: middle;
 		
 }
 
 .logo {
 	color: #e6dfd1;
 	background: rgba(0, 0, 0, 0.5);
-	
+	font-family: fantasy;
+	font-size: 4.06em;
+	text-align: center;
 }
 
 
 .subheading {
 	height: 35px;
-	width: 1000px;
+	width: 100%;
 	margin-right: auto;
 	margin-left: auto;
 	background-color: gray;
@@ -65,17 +74,19 @@ html {
 
 .circlecontainer {
 	height: 25px;
-	width: 906px;
+	width: 90.6%;
 	margin-right: auto;
 	margin-left: auto;
 	margin-top: 0px;
 	text-align: center;
+	overflow: hidden;
 }
 
 
 .contentcontainer	
 {
-	width: 906px;
+	width: 90.6%; /*906px*/
+	max-width: 906px;
 	margin-right: auto;
 	margin-left: auto;
 	margin-top: 10px;
@@ -84,23 +95,15 @@ html {
 .sidemenu {
 	
 	position: fixed;
-	width: 200px;
+	width: 22.07%;
+	max-width: 200px;
 	background-color: #cfc2bc;
 	border: 3px double gray;
 	float: right;
-	margin-left: 700px;
+	/*margin-left: 700px; 700px*/
+	
 	
 }
-
-/*
-.abouttheauthor {
-	
-	height: 400px;
-	width: 200px;
-	background-color: red;
-
-}
-*/
 
 .centeredimage {
 	text-align: center;
@@ -136,13 +139,11 @@ a:hover {
 }
 
 .content {
-	width:700px;
-	margin-right: auto;
-	margin-left: auto;	
-	border-radius: 0px;
+	width:77.26%;
+	max-width: 700px;
 	background-color: #e6dfd1;
 	padding-bottom: 30px;
-	float:left;
+	float: right;
 
 }
 
@@ -188,7 +189,7 @@ a:hover {
 
 .footer {
 	
-	width: 1000px;
+	width: 100%;
 	margin-right: auto;
 	margin-left: auto;
 	background-color: #ff7e3d;
@@ -207,8 +208,17 @@ a:hover {
 	height: 5%;
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 700px) {
 	.content {
 		background-color: blue;
 	}
+
+	.socialmedia, .subheading, .circlecontainer {
+		display: none;
+	}
+
+	.heading {
+		overflow: hidden;
+	}
+	
 }
