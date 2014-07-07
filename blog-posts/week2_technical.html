@@ -100,53 +100,78 @@
 			<p id="abouttext">I'm a former sales manager trying to make it to the other side of the office. Follow me as I struggle to become right-brained again.</p>
 
 			<p class="bloglink"><a href="week1_cultural.html">Culural Blog</a></p>
-			<p class="bloglink">What's in a Design?</p>
-			<p class="bloglink"><a href="week2_technical.html">Hanging the Mona Lisa</a></p>
+			<p class="bloglink">Hanging the Mona Lisa</p>
+			<p class="bloglink"><a href="week1_technical.html">What's in a Design?</a></p>
 		</div> <!--End of sidemenu-->
 
 		<div class="content">
 
 		
-			<p class="entrytitle"> What's in a Design? </p>
-			<p class = "entrydate"> June 29, 2014</p>
-			<p class = "entrytext">
-				At first I struggled with this exercise because I couldn't think of my favorite "well-designed" websites. Then I realized, the whole point is to think about which sites I spend the most time on even if they are not necessarily well designed…
-			</p>
-
-			<p class="entryheading">
-				Facebook
-			</p>
-
-			<p class="centeredimage"><img src="images/facebook.png"/></p>
+			<p class="entrytitle"> Hanging the Mona Lisa </p>
+			<p class = "entrydate"> July 6, 2014</p>
 
 			<p class = "entrytext">
-				I just realized I absolutely hate the look of facebook.com. I've never uttered or even thought such a thing until this blog entry. That's note-worthy only because I worked there for six years and spent literally more waking hours on Facebook than anything else for the entirety of my career there. And in all that looking… it didn't occur to me that it's kinda poorly designed. The site is supposed to (and often does!) make me feel warm and fuzzy and connected, but when I step away from the screen I just feel confused by the abundance of things to look at. To be fair, I have no idea how to even fix the problem and still keep all the important features. And the design certainly doesn't act as a hindrance to my usage.
+				Let's talk about margins, borders and padding within the context of hanging a painting on a wall. Turns out I just got a great deal on a classic work of art, so the timing is perfect.
 				<br><br>
-				One fairly large issue is that an overwhelming part of the design hinges on the content that's posted. I have a lot of friends who (work at Facebook and) post beautiful images, but when I glance at a friend's Facebook homepage it looks and feels entirely different. For the worst, in my opinion. But for the sake of moving on to the things that can be controlled, let's assume the content is world-class and only adds to the aesthetic. What now? 
-				<br><br>
-				Well, it's still really cluttered by the four columns of content, each with different colors, widths and widgets. This is especially confusing for people with poor or limited vision. After suffering a stroke, my father has issues seeing out of his right eye - when he browses Facebook I see him scanning the screen in all directions to make sure he didn't miss anything. It takes a while. A design with less columns would certainly help…
-				<br><br>
-				Which is exactly the experience on the Facebook mobile application. The only difference between the two is design and the mobile app wins by a long shot (and is even pleasing, in my opinion). 
+				1 - First we start off with examining what we have - a wall and a painting.
 			</p>
 
-			<p class="entryheading">
-				Amazon
-			</p>
-
-			<p class="centeredimage"><img src="images/amazon.png"/></p>
+			<p class="centeredimage"><img src="images/step1.png"/></p>
+			<p class="centeredimage"><img src="images/monalisa.jpg"/></p>
 
 			<p class = "entrytext">
-				Like Facebook, Amazon has a lot going on in terms of content. But given the site's purpose as a retailer, the wealth of information is a positive. I go to Amazon's site feeling like I'm on a mission to turn over all rocks looking for a particular item - and they delivery on that. The grid formatting and long page lengths, the abundance of filter options, the homepage ripe with suggestions on what I may want - it's A LOT, but it's exactly what I want. 
+				2 - If I tell my webpage to put my Mona Lisa on the wall, we get the following. It just plunks her down in the default position of the top left corner since I haven't specified otherwise.
 			</p>
 
-			<p class="entryheading">
-				Netflix
-			</p>
-
-			<p class="centeredimage"><img src="images/netflix.png"/></p>
+			<p class="centeredimage"><img src="images/step2.png"/></p>
 
 			<p class = "entrytext">
-				I love the design of Netflix. It's striking, simple to navigate, and beautifully displays the media for consumption. I find that I actually "waste" a lot of time on the site searching through titles and it's because the experience is so smooth and easy.
+			3 - In order to position Mona Lisa exactly where I want, I can specify a MARGIN. A margin is the amount of space between the element I want to position, Mona Lisa, and the edges of the element I want to position her on, the wall.
+			<br><br>
+			In this case, let's say that I want Mona Lisa to hang high, but not all the way at the top. I want a space, or MARGIN TOP, of 100px.
+			</p>
+
+			<p class="centeredimage"><img src="images/step3.png"/></p>
+
+			<p class = "entrytext">
+			4 - Awesome, Mona Lisa isn't all the way at the ceiling anymore. But she's still all the way to the left of the wall. I don't want that because the door will obstruct the view once it swings open.
+			<br><br>
+			I'm going to specify a MARGIN LEFT of 150px so that we move her over to the right by that many pixels.
+
+			</p>
+
+			<p class="centeredimage"><img src="images/step4.png"/></p>
+			
+			<p class = "entrytext">
+			5 - Now she's exactly where I want her! But as I consider her awesomeness, I realize that I probably should have her framed. The BORDER attribute allows me to do just that - add a specific amount of pixels around the outer edge of my element.
+			<br><br>
+			Let's give Mona Lisa a nice white border of 20px.
+			</p>
+
+			<p class="centeredimage"><img src="images/step5.png"/></p>
+
+			<p class = "entrytext">
+			6 - Now Mona Lisa is really standing out! Note that the total size of the element plus it's border has increased. It now includes the space taken up my Mona Lisa plus the space taken up by the frame. It's a total package!
+			<br><br>
+			That means that the margins we specified earlier are now calibrated to the edges of the frame around Mona Lisa, not just the actual painting itself.
+			</p>
+
+			<p class = "entrytext">
+			7 - This may seem silly to you, but I have a lot of friends who aren't into art… or history… or pop culture… or common knowledge… so they don't really know what my painting is all about. In order to remedy that, I'll add some text within my element to make it very clear.
+			</p>
+
+			<p class="centeredimage"><img src="images/step7.png"/></p>
+
+			<p class = "entrytext">
+			8 - The text begins at the very edge of the element, Mona Lisa. Because I have a white border and white writing, this makes it harder to read. In order to add space between the edge of my element, Mona Lisa, and the beginning of my text, I can specify PADDING. 
+			<br><br>
+			Let's start off with a padding of 10px.
+			</p>
+
+			<p class="centeredimage"><img src="images/step8.png"/></p>
+
+			<p class = "entrytext">
+			9 - Note that unlike specifying a margin, which adds transparent space between my two elements, the wall and the painting; a padding is not transparent. Adding a padding of 10px means that the size of my element has increased by 10px on all sides. Because my painting of Mona Lisa can't get any bigger, I have to glue a few Mona Lisa's together to accommodate the padding, which causes a repetition in the pattern.
 			</p>
 
 		</div> <!--End of content-->

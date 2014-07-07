@@ -1,0 +1,198 @@
+/**
+ * html5doctor.com Reset Stylesheet v1.6.1 (http://html5doctor.com/html-5-reset-stylesheet/)
+ * Richard Clark (http://richclarkdesign.com)
+ * http://cssreset.com
+ */
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+body {
+    line-height:1;
+}
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section {
+    display:block;
+}
+nav ul {
+    list-style:none;
+}
+blockquote, q {
+    quotes:none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content:'';
+    content:none;
+}
+a {
+    margin:0;
+    padding:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+/* change colours to suit your needs */
+ins {
+    background-color:#ff9;
+    color:#000;
+    text-decoration:none;
+}
+/* change colours to suit your needs */
+mark {
+    background-color:#ff9;
+    color:#000;
+    font-style:italic;
+    font-weight:bold;
+}
+del {
+    text-decoration: line-through;
+}
+abbr[title], dfn[title] {
+    border-bottom:1px dotted;
+    cursor:help;
+}
+table {
+    border-collapse:collapse;
+    border-spacing:0;
+}
+/* change border colour to suit your needs */
+hr {
+    display:block;
+    height:1px;
+    border:0;
+    border-top:1px solid #cccccc;
+    margin:1em 0;
+    padding:0;
+}
+input, select {
+    vertical-align:middle;
+}
+
+/**************** Begin My Own CSS ******************/
+
+html {
+	color: #29221F;
+}
+
+header {
+	background-color: #0ABFBC;
+	height: 250px;
+	text-align: center;
+	border-bottom: 1px solid #13747D;
+}
+
+footer {
+	background-color: #29221F;
+	color: #FCF7C5;
+	color: #FCF7C5;
+	text-align: right;
+	font-family: 'Roboto Slab';
+	font-size: .75em;
+	height: 50px;
+	
+}
+
+table, td, tr {
+	text-align: center;
+}
+
+td {
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
+.name {
+	font-size: 1em;
+	padding-top: 1em;
+	font-family: 'Roboto Slab';
+}
+
+.byline {
+	font-size: 4em;
+	padding-top: 1em;
+	font-family: 'Oswald';
+}
+
+.name, .byline {
+	
+	color: white;
+}
+
+.first, .second, .third {
+
+	max-width: 960px;
+	margin-left: auto;
+	margin-right: auto;
+
+	margin-top: 80px;
+	margin-bottom: 80px;
+}
+
+.secondcontainer {
+	max-width: 100%;
+	background-color: #FC354C;
+}
+
+.second {
+	padding-top: 40px;
+	padding-bottom: 40px;
+	color: #FCF7C5;
+}
+
+.imgheader {
+	text-align: center;
+}
+
+.secondimage, .secondtext {
+	max-width: 480px;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.secondtext {
+	padding-right: 10px;
+}
+
+.thirdtext {
+	max-width: 300px;
+	padding-left: 10px;
+}
+
+.thirdimage, .thirdtext {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.imagecaption {
+	font-family: 'Roboto Slab';
+	font-size: .80em;
+	line-height: 1.5;
+}
+
+.imgheader {
+	font-family: 'Oswald';
+	font-size: 1.5em;
+	line-height: 2;
+	color: #13747D;
+}
+
+img {
+	border: 1px solid #FCF7C5;
+}
