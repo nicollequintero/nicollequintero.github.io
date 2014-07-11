@@ -83,7 +83,11 @@ input, select {
     vertical-align:middle;
 }
 
-/* ***** BEGIN MY OWN CSS ****** */
+/* 
+******************************************************
+BEGIN MY OWN CSS 
+******************************************************
+*/
 
 html {
 	background-image: url("http://static.freepik.com/free-photo/subtle-fabric-texture--background_19-135531.jpg");
@@ -99,8 +103,6 @@ img {
 	 
 	 border: 0px solid #3753bf;
 	 width: 100%;
-/*	 margin-right: auto;
-	 margin-left: auto; */
 	 background-image: url("images/multicolor.png");
 }
 
@@ -108,10 +110,107 @@ img {
 	color: #e6dfd1;
 	background: rgba(0, 0, 0, 0.5);
 	font-family: fantasy;
+}
+
+.centeredimage, #authorimage {
 	text-align: center;
 }
 
-/******** LARGE SCREEN *********/
+.centeredimage img {
+	border: 1px solid #52433f;
+}
+
+#authorimage img {
+	border: 1px solid #52433f;
+}
+
+#abouttext {
+	font-family: "Avenir";
+	color: #000063;
+	font-size: .75em;
+	font-style: italic;
+	text-align: center;
+	padding:3px;
+}
+
+.bloglink {
+	font-family: "Avenir";
+	color: #000063;
+	padding: 5px;
+	text-align: center;
+}
+
+a {
+	color: #000063;
+}
+
+a:hover {
+	background-color: white;
+}
+
+.entrytitle {
+	font-family: "Avenir";
+	font-size: 2.1875em;
+	font-weight: bold;
+	color: #000063;
+	padding-left: 30px;
+	padding-top: 30px;
+	padding-bottom: 0px;
+}
+
+.entrytext {
+	font-family: "Avenir";
+	color: #000063;
+	font-size: .875em;
+	padding-left: 30px;
+	margin-right: 30px;
+}
+
+.entryheading {
+	font-family: "Avenir";
+	color: #000063;
+	font-size: 1.25em;
+	padding-left: 30px;
+	font-weight: bold;
+}
+
+.entrydate {
+	font-family: "Avenir";
+	color: #000063;
+	font-size: .875em;
+	padding-left: 30px;
+	font-style: italic;
+	font-weight: bold;
+}
+
+* {
+	border: 0px solid black;
+}
+
+
+.footer {
+	width: 100%;
+	margin-right: auto;
+	margin-left: auto;
+	background-color: #ff7e3d;
+	text-align: right;
+	color: #e6dfd1;
+	font-family: Avenir;
+	font-size: .875em;
+	padding-right: 3px;
+	clear: both;
+	margin-top: 30px;
+}
+
+#twitter {
+	height: 5%;
+}
+
+/* 
+******************************************************
+LARGER SCREENS
+******************************************************
+*/
 
 @media screen and (min-width: 700px) {
 
@@ -211,109 +310,12 @@ body {
 }
 }
 
-/******** END LARGE SCREEN *********/
 
-.centeredimage, #authorimage {
-	text-align: center;
-}
-
-.centeredimage img {
-	border: 1px solid #52433f;
-}
-
-#authorimage img {
-	border: 1px solid #52433f;
-}
-
-#abouttext {
-	font-family: "Avenir";
-	color: #000063;
-	font-size: .75em;
-	font-style: italic;
-	text-align: center;
-	padding:3px;
-}
-
-.bloglink {
-	font-family: "Avenir";
-	color: #000063;
-	padding: 5px;
-	text-align: center;
-}
-
-a {
-	color: #000063;
-}
-
-a:hover {
-	background-color: white;
-}
-
-
-
-.entrytitle {
-	font-family: "Avenir";
-	font-size: 2.1875em;
-	font-weight: bold;
-	color: #000063;
-	padding-left: 30px;
-	padding-top: 30px;
-	padding-bottom: 0px;
-}
-
-.entrytext {
-	font-family: "Avenir";
-	color: #000063;
-	font-size: .875em;
-	padding-left: 30px;
-	margin-right: 30px;
-}
-
-.entryheading {
-	font-family: "Avenir";
-	color: #000063;
-	font-size: 1.25em;
-	padding-left: 30px;
-	font-weight: bold;
-}
-
-.entrydate {
-	font-family: "Avenir";
-	color: #000063;
-	font-size: .875em;
-	padding-left: 30px;
-	font-style: italic;
-	font-weight: bold;
-}
-
-* {
-	border: 0px solid black;
-}
-
-
-.footer {
-	width: 100%;
-	margin-right: auto;
-	margin-left: auto;
-	background-color: #ff7e3d;
-	text-align: right;
-	color: #e6dfd1;
-	font-family: Avenir;
-	font-size: .875em;
-	padding-right: 3px;
-	clear: both;
-	margin-top: 30px;
-}
-
-
-
-#twitter {
-	height: 5%;
-}
-
-
-
-/******** SMALLER SCREEN *********/
+/* 
+******************************************************
+SMALLER SCREENS
+******************************************************
+*/
 
 @media screen and (max-width: 700px) {
 	
@@ -328,7 +330,7 @@ a:hover {
 
 .logo {
 	font-size: 4em;
-
+	text-align: center;
 }
 
 .contentcontainer	{
