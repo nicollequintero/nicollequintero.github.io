@@ -15,12 +15,11 @@ img {
 	max-width: 100%;
 }
 
+
 .heading {
 	 
 	 border: 0px solid #3753bf;
-	 height: 100px;
 	 width: 100%;
-	 margin-top: 50px;
 	 margin-right: auto;
 	 margin-left: auto;
 	 padding: 0px;
@@ -33,10 +32,22 @@ img {
 	color: #e6dfd1;
 	background: rgba(0, 0, 0, 0.5);
 	font-family: fantasy;
-	font-size: 4.06em;
 	text-align: center;
 }
 
+/******** LARGE SCREEN *********/
+
+@media screen and (min-width: 700px) {
+
+.heading	{
+	height: 100px;
+	margin-top: 50px;
+}
+
+.logo {
+	font-size: 4.06em;
+
+}
 
 .subheading {
 	height: 35px;
@@ -113,13 +124,15 @@ img {
 	
 	
 }
-
-.centeredimage {
-	text-align: center;
-	
 }
 
-.centeredimage img {
+/******** END LARGE SCREEN *********/
+
+.centeredimage, #authorimage {
+	text-align: center;
+}
+
+.centeredimage, #authorimage img {
 	border: 1px solid #52433f;
 }
 
@@ -129,7 +142,6 @@ img {
 	font-size: .75em;
 	text-align: center;
 	padding:3px;
-
 }
 
 .bloglink {
@@ -190,7 +202,6 @@ a:hover {
 
 
 .footer {
-	
 	width: 100%;
 	margin-right: auto;
 	margin-left: auto;
@@ -210,17 +221,40 @@ a:hover {
 	height: 5%;
 }
 
+
+
+/******** SMALLER SCREEN *********/
+
 @media screen and (max-width: 700px) {
-	.content {
-		background-color: blue;
-	}
+	
+.socialmedia, .subheading, .subtitle, #abouttext, #authorimage, .circlecontainer, .circleborder {
+	display: none;
+}
 
-	.socialmedia, .subheading, .circlecontainer {
-		display: none;
-	}
+.logo {
+	font-size: 4em;
 
-	/*.logo {
-		font-size: 1em;
-	}*/
+}
+
+.contentcontainer	{
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.sidemenu {
+	background-color: #cfc2bc;
+	border: 3px double gray;
+}
+
+.bloglink {
+	padding: 0px;
+	line-height: .5em;
+}
+
+.content {
+	background-color: #e6dfd1;
+	padding-bottom: 30px;
+}
+
 	
 }
