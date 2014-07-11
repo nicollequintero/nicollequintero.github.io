@@ -87,7 +87,6 @@ input, select {
 
 html {
 	background-image: url("http://static.freepik.com/free-photo/subtle-fabric-texture--background_19-135531.jpg");
-	
 }
 
 
@@ -188,7 +187,8 @@ body {
 }
 
 .content {
-	width:77.26%; 
+	
+	width: 75%;
 	max-width: 700px;
 	background-color: #e6dfd1;
 	padding-bottom: 30px;
@@ -199,7 +199,7 @@ body {
 .sidemenu {
 	
 	position: fixed;
-	width: 22.07%;
+	width: 20%;
 	max-width: 200px;
 	background-color: #cfc2bc;
 	border: 3px double gray;
@@ -229,23 +229,24 @@ body {
 	font-family: "Avenir";
 	color: #000063;
 	font-size: .75em;
+	font-style: italic;
 	text-align: center;
 	padding:3px;
 }
 
 .bloglink {
 	font-family: "Avenir";
-	color: white;
+	color: #000063;
 	padding: 5px;
 	text-align: center;
 }
 
 a {
-	color: white;
+	color: #000063;
 }
 
 a:hover {
-	background-color: #000063;
+	background-color: white;
 }
 
 
@@ -331,6 +332,7 @@ a:hover {
 }
 
 .contentcontainer	{
+	max-width: 90%;
 	margin-right: auto;
 	margin-left: auto;
 }
@@ -343,7 +345,7 @@ a:hover {
 
 .bloglink {
 	padding: 0px;
-	line-height: 1em;
+	line-height: 1.5em;
 }
 
 .content {
