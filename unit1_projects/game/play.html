@@ -1,0 +1,89 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<link type:"text/css" rel="stylesheet" href="play.css"/>
+	<title>Move Me</title>
+</head>
+<body onLoad="printCarUp(); endTime();">
+
+<div id="header">
+	<button type="button" onclick="printCarUp();">Move Up</button>
+	<button type="button" onclick="printCarDown()">Move Down</button>
+	<button type="button" onclick="printCarLeft()">Move Left</button>
+	<button type="button" onclick="printCarRight()">Move Right</button>
+</div>
+
+<div id="car" >
+</div>
+</body>
+
+
+<script type="text/javascript">
+
+var myObject = {
+	outline: "&nbsp; &nbsp; __<br>&nbsp; _| =&#92;__<br>/o____o_&#92;",
+	horizontal_pos: 30,
+	vertical_pos: 10,
+};
+
+function printCarUp () {
+	document.getElementById("car").innerHTML =  myObject.outline;
+	myObject.vertical_pos-=20;
+	document.getElementById("car").style.marginTop=myObject.vertical_pos+"px";
+	checkIfSolved();
+};
+
+function printCarDown () {
+	document.getElementById("car").innerHTML =  myObject.outline;
+	myObject.vertical_pos+=20;
+	document.getElementById("car").style.marginTop=myObject.vertical_pos+"px";
+	checkIfSolved();
+
+};
+
+function printCarLeft () {
+	document.getElementById("car").innerHTML =  myObject.outline;
+	myObject.horizontal_pos-=20;
+	document.getElementById("car").style.marginLeft=myObject.horizontal_pos+"px";
+	checkIfSolved();
+
+};
+
+function printCarRight () {
+	document.getElementById("car").innerHTML =  myObject.outline;
+	myObject.horizontal_pos+=20;
+	document.getElementById("car").style.marginLeft=myObject.horizontal_pos+"px";
+	checkIfSolved();
+
+};
+
+function endTime() {
+    setTimeout(function(){document.body.style.backgroundImage = "url(http://hdwallphotos.com/wp-content/uploads/2014/04/Game-Over-Black-Screen-Wallpaper-Wide-HD.png)";}, 60000);
+    setTimeout(function(){document.body.style.backgroundSize = "100%";}, 60000);
+    setTimeout(function(){document.getElementById("header").style.display="none";}, 60000);
+    setTimeout(function(){document.getElementById("car").style.display="none";}, 60000);
+}
+
+function checkIfSolved () {
+	if (myObject.horizontal_pos>910 && myObject.vertical_pos>530) {
+		document.body.style.backgroundImage = "url(http://static.comicvine.com/uploads/original/0/40/3591841-awiy.jpeg)";
+		document.body.style.backgroundSize = "100%";
+		document.getElementById("header").style.display="none";
+		document.getElementById("car").style.display="none";
+		setTimeout(function(){alert("You made it!");}, 1000);
+
+	}
+};
+
+//tried to call two functions at first then had to collapse actions, adding to the numbers and printing in one
+//had to look up how to manipulate a different object that is not the current element
+//margin accepted only a string
+//had some issues with using the \ and space characters
+//didn't find a use case for this
+//had to look up how to print a lot of text using just one statement since innerHTML statement will override one another
+//unsure how to use variables from the JS in the CSS file so worked around that with explicit definition
+//tried an If statement in the block of JS but that didn't work, had to call within each funtion instead
+//unsure how to end the endTime function so game over doesn't display
+</script>
+</html>
+

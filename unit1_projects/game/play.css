@@ -1,0 +1,14 @@
+body {
+	background: url("maze.png");
+	background-repeat: no-repeat;
+}
+
+#car {
+
+	margin-top: 0px;
+	margin-left: 0px;
+	display: inline-block;
+	font-weight: bold;
+	color: blue;
+}
+

@@ -6,10 +6,11 @@
 	<title>Nicolle Quintero</title>
 </head>
 <body>
-	<header>
-		<section class="name">Nicolle Quintero</section>
-		<section class="byline">This is my life in boxes.</section>
-	</header>
+	<div class="header" onmouseover="changeHeaderColor(this)" onmouseout="revertHeaderColor(this)">
+		<div class="name" onmouseover="mOver(this)" onmouseout="mOut(this)">Nicolle Quintero</div>
+		<div class="byline" >This is my life in boxes.</div>
+		<div id="blogbutton"><a href="blog-posts/week1_cultural.html" onClick="alert('Hope your enjoy it!');">Read my Blog.</a></div>
+	</div>
 
 	<main>
 		<section class="first"> 
@@ -17,10 +18,10 @@
 		<table>
 			
 			<tr>
-				<td><img src="one.jpg"></td>
-				<td><img src="two.jpg"></td>
-				<td><img src="three.jpg"></td>
-				<td><img src="four.jpg"></td>
+				<td onmouseover="addThickBorder(this)" onmouseout="removeThickBorder(this)"><img src="one.jpg"></td>
+				<td onmouseover="addThickBorder(this)" onmouseout="removeThickBorder(this)"><img src="two.jpg"></td>
+				<td onmouseover="addThickBorder(this)" onmouseout="removeThickBorder(this)"><img src="three.jpg"></td>
+				<td onmouseover="addThickBorder(this)" onmouseout="removeThickBorder(this)"><img src="four.jpg"></td>
 			</tr>
 
 			<tr>
@@ -72,8 +73,61 @@
 	</main>
 
 	<footer> 
-		Quintero Consulting Groupe - All Rights Reserved
+		<section class="listcolumn"> 
+			<h3> Links</h3>
+			<artcle class="links">
+				<a href="http:www.facebook.com">Link One</a>
+				<a href="http:www.facebook.com">Link One</a>
+				<a href="http:www.facebook.com">Link One</a>
+			</article>
+		</section>
+		<section class="listcolumn"> 
+			<h3> Links</h3>
+			<artcle class="links">
+				<a href="http:www.facebook.com">Link One</a>
+				<a href="http:www.facebook.com">Link One</a>
+				<a href="http:www.facebook.com">Link One</a>
+			</article>
+		</section>
+		<section class="listcolumn"> 
+			<h3> Links</h3>
+			<artcle class="links">
+				<a href="http:www.facebook.com">Link One</a>
+				<a href="http:www.facebook.com">Link One</a>
+				<a href="http:www.facebook.com">Link One</a>
+			</article>
+		</section>
+
+		<!--Quintero Consulting Groupe - All Rights Reserved-->
 	</footer>
 
 </body>
+
+<script type="text/javascript">
+
+function	mOver (obj) {
+	obj.innerHTML = "Thats Me";
+}
+
+function	mOut (obj) {
+	obj.innerHTML = "Nicolle Quintero";
+}
+
+function	changeHeaderColor (obj) {
+	obj.className = 'altheader';
+}
+
+function 	revertHeaderColor (obj) {
+	obj.className = 'header';
+}
+
+function 	addThickBorder (obj) {
+	obj.className = 'thickBorder';
+}
+
+function 	removeThickBorder (obj) {
+	obj.className = '';
+}
+
+</script>
 </html>

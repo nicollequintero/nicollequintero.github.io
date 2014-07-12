@@ -47,6 +47,7 @@ a {
     font-size:100%;
     vertical-align:baseline;
     background:transparent;
+    text-decoration: none;
 }
 /* change colours to suit your needs */
 ins {
@@ -91,9 +92,18 @@ html {
 	color: #29221F;
 }
 
-header {
+.testing {
+	background-color: black;
+}
+
+.header {
 	background-color: #0ABFBC;
-	height: 250px;
+	text-align: center;
+	border-bottom: 1px solid #13747D;
+}
+
+.altheader {
+	background-color: #FC354C;
 	text-align: center;
 	border-bottom: 1px solid #13747D;
 }
@@ -101,12 +111,12 @@ header {
 footer {
 	background-color: #29221F;
 	color: #FCF7C5;
-	color: #FCF7C5;
-	text-align: right;
 	font-family: 'Roboto Slab';
-	font-size: .75em;
-	height: 50px;
-	
+	font-size: 1em;
+}
+
+.listcolumn {
+	float: right;
 }
 
 table, td, tr {
@@ -122,6 +132,7 @@ td {
 	font-size: 1em;
 	padding-top: 1em;
 	font-family: 'Roboto Slab';
+	text-decoration: underline;
 }
 
 .byline {
@@ -132,6 +143,23 @@ td {
 
 .name, .byline {
 	
+	color: white;
+}
+
+#blogbutton {
+	font-size: 1em;
+	font-family: 'Roboto Slab';
+	margin-top: 3em;
+	color: white;
+	background-color: #29221F;
+	margin-right: auto;
+	margin-left: auto;
+	width: 10%;
+	margin-bottom: 3em;
+	padding: .5em;
+}
+
+#blogbutton a:visited {
 	color: white;
 }
 
@@ -195,4 +223,8 @@ td {
 
 img {
 	border: 1px solid #FCF7C5;
+}
+
+.thickBorder img {
+	border: 3px solid #0ABFBC;
 }
