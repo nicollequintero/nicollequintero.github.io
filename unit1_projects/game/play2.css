@@ -190,6 +190,7 @@ footer button {
 	text-align: center;
 	font-family: 'Oswald';
 	background-image: url("http://3.bp.blogspot.com/-XAyILqnw9LM/UmpMUn2ts2I/AAAAAAAAErI/gSq7wHUIMqo/s320/Tileable+classic+grass+texture.jpg");
+	overflow: hidden;
 }
 
 .tree {

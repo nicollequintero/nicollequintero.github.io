@@ -96,7 +96,7 @@ function createRandomEnvironment () {
 
 function updateTimer () {	
 	//if time is up, stop clock and show game over
-	if(startTime == 10)
+	if(startTime == 20)
 		{ 	clearInterval(clock); 
 			document.getElementById("forest").innerHTML = "GAME OVER!";
 			//document.getElementById("forest").style.backgroundColor = black;
@@ -113,10 +113,10 @@ function updateTimer () {
 
 function assignTreeRandomProperties(tree) {
 	
-	tree.style.top = randomIntFromInterval(50,400)+"px";
-	tree.style.left = randomIntFromInterval(50,400)+"px";
-	tree.style.height = randomIntFromInterval(10,100)+"px";
-	tree.style.width = randomIntFromInterval(20,100)+"px";
+	tree.style.top = randomIntFromInterval(30,450)+"px";
+	tree.style.left = randomIntFromInterval(30,450)+"px";
+	tree.style.height = randomIntFromInterval(30,100)+"px";
+	tree.style.width = randomIntFromInterval(30,100)+"px";
 }
 
 function randomIntFromInterval(min,max)
@@ -152,7 +152,9 @@ function checkEachTree (tree, top, bottom, left, right) {
 
 function gotHoney () {
 	if (myObject.top>=410 && myObject.left>=410)
-		alert("You made it!");
+		{	clearInterval(clock); 
+			document.getElementById("forest").innerHTML = "You Made It!";
+		}
 }
 
 //get the "top" value for this element as set in CSS
