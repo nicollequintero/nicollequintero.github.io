@@ -27,11 +27,17 @@ var myObject = {
 	vertical_pos: 10,
 };
 
+var wipeCar;
+var wipeButtons;
+var changeBackground;
+var changeBackgroundSize;
+
 function printCarUp () {
 	document.getElementById("car").innerHTML =  myObject.outline;
 	myObject.vertical_pos-=20;
 	document.getElementById("car").style.marginTop=myObject.vertical_pos+"px";
 	checkIfSolved();
+
 };
 
 function printCarDown () {
@@ -58,20 +64,28 @@ function printCarRight () {
 
 };
 
+//set Timeouts so that everything is wiped and a Game Over background appears if you've run over time
 function endTime() {
-    setTimeout(function(){document.body.style.backgroundImage = "url(http://hdwallphotos.com/wp-content/uploads/2014/04/Game-Over-Black-Screen-Wallpaper-Wide-HD.png)";}, 60000);
-    setTimeout(function(){document.body.style.backgroundSize = "100%";}, 60000);
-    setTimeout(function(){document.getElementById("header").style.display="none";}, 60000);
-    setTimeout(function(){document.getElementById("car").style.display="none";}, 60000);
+    changeBackground = setTimeout(function(){document.body.style.backgroundImage = "url(http://hdwallphotos.com/wp-content/uploads/2014/04/Game-Over-Black-Screen-Wallpaper-Wide-HD.png)";}, 10000);
+    changeBackgroundSize = setTimeout(function(){document.body.style.backgroundSize = "100%";}, 10000);
+    wipeButtons = setTimeout(function(){document.getElementById("header").style.display="none";}, 10000);
+    wipeCar = setTimeout(function(){document.getElementById("car").style.display="none";}, 10000);
 }
 
+//reset Timeouts so that the Game Over message doesn't appear and Winning message appears instead
 function checkIfSolved () {
-	if (myObject.horizontal_pos>910 && myObject.vertical_pos>530) {
+	if (myObject.horizontal_pos>(window.innerWidth-75) || myObject.vertical_pos>530) {
+		clearTimeout(changeBackground);
+		clearTimeout(changeBackgroundSize);
+		clearTimeout(wipeButtons);
+		clearTimeout(wipeCar);
+
 		document.body.style.backgroundImage = "url(http://static.comicvine.com/uploads/original/0/40/3591841-awiy.jpeg)";
 		document.body.style.backgroundSize = "100%";
 		document.getElementById("header").style.display="none";
 		document.getElementById("car").style.display="none";
 		setTimeout(function(){alert("You made it!");}, 1000);
+
 
 	}
 };
@@ -85,6 +99,7 @@ function checkIfSolved () {
 //unsure how to use variables from the JS in the CSS file so worked around that with explicit definition
 //tried an If statement in the block of JS but that didn't work, had to call within each funtion instead
 //unsure how to end the endTime function so game over doesn't display
+//would like to be able to accept keyboard inputs instead of button presses
 </script>
 </html>
 

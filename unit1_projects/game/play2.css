@@ -1,0 +1,223 @@
+
+/**
+ * html5doctor.com Reset Stylesheet v1.6.1 (http://html5doctor.com/html-5-reset-stylesheet/)
+ * Richard Clark (http://richclarkdesign.com)
+ * http://cssreset.com
+ */
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+body {
+    line-height:1;
+}
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section {
+    display:block;
+}
+nav ul {
+    list-style:none;
+}
+blockquote, q {
+    quotes:none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content:'';
+    content:none;
+}
+a {
+    margin:0;
+    padding:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+    text-decoration: none;
+}
+/* change colours to suit your needs */
+ins {
+    background-color:#ff9;
+    color:#000;
+    text-decoration:none;
+}
+/* change colours to suit your needs */
+mark {
+    background-color:#ff9;
+    color:#000;
+    font-style:italic;
+    font-weight:bold;
+}
+del {
+    text-decoration: line-through;
+}
+abbr[title], dfn[title] {
+    border-bottom:1px dotted;
+    cursor:help;
+}
+table {
+    border-collapse:collapse;
+    border-spacing:0;
+}
+/* change border colour to suit your needs */
+hr {
+    display:block;
+    height:1px;
+    border:0;
+    border-top:1px solid #cccccc;
+    margin:1em 0;
+    padding:0;
+}
+input, select {
+    vertical-align:middle;
+}
+
+/*
+***********************************
+BEGIN MY OWN CSS
+***********************************
+*/
+
+article, aside, footer, header, main, nav, section {
+	display: block;
+}
+
+body {
+	width: 1000px;
+	height: 100%;
+	margin-left: auto;
+	margin-right: auto;
+	background: #F0F8FF;}
+
+main {
+	float right;
+	width: 700px;
+}
+
+nav {
+	float: left;
+	margin-left: 75px;
+	margin-top: 125px;
+	width: 150px;
+	display: block;
+	font-family: 'Roboto Slab';
+	font-size: 1.25em;
+	padding: 5px;
+	color: black;
+	text-align: right;
+}
+
+span {
+	font-family: 'Oswald';
+	font-size: 1.25em;
+}
+header {
+
+	text-align: center;
+	padding: 10px;
+}
+
+
+footer {
+	position: absolute;
+	top: 560px;
+	margin-left: 275px;
+}
+
+header button {
+
+	height: 25px;
+	width: 125px;
+	background-color: yellow;
+	border: 2px solid black;
+	color: black;
+	font-size: 1em;
+	border-radius: 10px;
+}
+
+footer button {
+
+	height: 25px;
+	width: 300px;
+	background-color: yellow;
+	border: 2px solid black;
+	color: black;
+	font-size: 1em;
+	border-radius: 10px;
+	float: left;
+}
+
+#timer
+{
+	margin-left: 25px;
+	width: 100px;
+	background-color: black;
+	border-radius: 10px;
+	color: red;
+	font-size: 1em;
+	text-align: center;
+	padding: 5px;
+	float: right;
+	font-family: 'Roboto Slab';
+
+}
+
+
+#forest {
+	width: 500px;
+	height: 500px;
+	margin-left: 250px;
+	background-color: green;
+	border: 0px solid black;
+	position: absolute;
+	font-size:100px;
+	color:red;
+	text-align: center;
+	font-family: 'Oswald';
+	background-image: url("http://3.bp.blogspot.com/-XAyILqnw9LM/UmpMUn2ts2I/AAAAAAAAErI/gSq7wHUIMqo/s320/Tileable+classic+grass+texture.jpg");
+}
+
+.tree {
+	background-color: black;
+	background-image: url("http://th05.deviantart.net/fs71/PRE/i/2010/291/3/4/seamless_desert_sand_texture_by_hhh316-d311qn7.jpg");
+}
+
+#tree1, #tree2, #tree3, #tree4, #tree5, #tree6, #tree7, #tree8, #tree9, #tree10 {
+	position: absolute;
+}
+
+#honey {
+	height: 90px;
+	width: 90px;
+	position: absolute;
+	top: 410px;
+	left:410px;
+	background-image: url("honey.png");
+	z-index: 10;
+}
+
+#babyBear {
+	color:red;
+	top: 0px;
+	left:0px;
+	height: 30px;
+	width: 30px;
+	background-image: url("ant.png");
+	position: absolute;
+	z-index: 10;
+}

@@ -1,0 +1,193 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<link type:"text/css" rel="stylesheet" href="play2.css">
+	<link href='http://fonts.googleapis.com/css?family=Oswald:700|Roboto+Slab:300' rel='stylesheet' type='text/css'>
+	<!--<meta name="viewport" content="width=device-width, initial-scale =1.0, user-scalable =yes">-->
+	<title>Got Honey?</title>
+</head>
+
+<body onLoad="myObject.printOut(); createRandomEnvironment(); clock = setInterval(function(){updateTimer()},1000);">
+	<header>
+		<section id="buttons">
+			<button type="button" onClick="myObject.moveUp();">Move Up</button>
+			<button type="button" onClick="myObject.moveDown();">Move Down</button>
+			<button type="button" onClick="myObject.moveLeft();">Move Left</button>
+			<button type="button" onClick="myObject.moveRight();">Move Right</button>
+		</section>
+	</header>
+	<nav>
+		<p> <span>Objective:</span> <br> Use the navigation buttons to help the ant get to the pot of honey. You won't be able to get through those sand dunes, so hurry up before time is over! </p>
+	</nav>
+	<main id="forest">
+		<article id="babyBear"></article>
+		<article class = "tree" id ="tree1"></article>
+		<article class = "tree" id ="tree2"></article>
+		<article class = "tree" id ="tree3"></article>
+		<article class = "tree" id ="tree4"></article>
+		<article class = "tree" id ="tree5"></article>
+		<article class = "tree" id ="tree6"></article>
+		<article class = "tree" id ="tree7"></article>
+		<article class = "tree" id ="tree8"></article>
+		<article class = "tree" id ="tree9"></article>
+		<article class = "tree" id ="tree10"></article>
+		<article id = "honey"></article>
+	</main>
+		
+	<footer>
+		<button type="button" onClick="createRandomEnvironment();">Move those sand dunes around!</button>
+		<p id="timer">GO!</p>
+	</footer>
+</body>
+
+<script type="text/javascript">
+
+var startTime = 0;
+var clock;
+var size = 30;
+
+var myObject =  {
+	outline: "",
+	top:0,
+	left:0,
+	printOut: function () {
+			document.getElementById("babyBear").style.top =  myObject.top+"px";
+			document.getElementById("babyBear").style.left =  myObject.left+"px";
+		},
+	moveUp: function () {
+			if(myObject.top>0 && noTreeThere(myObject.top-size, myObject.top, myObject.left, myObject.left+size)) {
+			myObject.top-=size;
+			console.log("top margin is"+myObject.top);
+			myObject.printOut();
+			gotHoney(); }
+		},
+	moveDown: function () {
+			if(myObject.top<450 && noTreeThere(myObject.top+size, myObject.top+size+size, myObject.left, myObject.left+size)) {
+			myObject.top+=size;
+			console.log("top margin is"+myObject.top);
+			myObject.printOut(); 
+			gotHoney();}
+		},
+	moveLeft: function () {
+			if(myObject.left>0 && noTreeThere(myObject.top, myObject.top+size, myObject.left-size, myObject.left)) {
+			myObject.left-=size;
+			console.log("left margin is"+myObject.left);
+			myObject.printOut(); 
+			gotHoney();}
+		},
+	moveRight: function () {
+			if(myObject.left<450 && noTreeThere(myObject.top, myObject.top+size, myObject.left+size, myObject.left+size+size)) {
+			myObject.left+=size;
+			console.log("left margin is"+myObject.left);
+			myObject.printOut(); 
+			gotHoney();}
+		},
+};
+
+var allTrees = [document.getElementById("tree1"),document.getElementById("tree2"),document.getElementById("tree3"),document.getElementById("tree4"),document.getElementById("tree5"),document.getElementById("tree6"),document.getElementById("tree7"),document.getElementById("tree8"),document.getElementById("tree9"),document.getElementById("tree10")];
+
+function createRandomEnvironment () {
+	//go through the allTrees array one element at a time
+	for (var x = 0; x < allTrees.length; x++) {
+		assignTreeRandomProperties(allTrees[x]);
+	};
+}
+
+function updateTimer () {	
+	//if time is up, stop clock and show game over
+	if(startTime == 10)
+		{ 	clearInterval(clock); 
+			document.getElementById("forest").innerHTML = "GAME OVER!";
+			//document.getElementById("forest").style.backgroundColor = black;
+			//document.getElementById("forest").style.backgroundImage = "none";
+			return; }
+	
+	startTime++;
+	
+	if(startTime ==1)
+		document.getElementById("timer").innerHTML = startTime+" second";
+	else
+		document.getElementById("timer").innerHTML = startTime+" seconds";
+}
+
+function assignTreeRandomProperties(tree) {
+	
+	tree.style.top = randomIntFromInterval(50,400)+"px";
+	tree.style.left = randomIntFromInterval(50,400)+"px";
+	tree.style.height = randomIntFromInterval(10,100)+"px";
+	tree.style.width = randomIntFromInterval(20,100)+"px";
+}
+
+function randomIntFromInterval(min,max)
+{
+	//return a random number that is rounded to the nearest size multiple
+    return Math.round((Math.floor(Math.random()*(max-min+1)+min))/size)*size;
+}
+
+function noTreeThere (top, bottom, left, right) {
+	//go through the allTrees array one element at a time
+	for (var x = 0; x < allTrees.length; x++) {
+		if (checkEachTree (allTrees[x], top, bottom, left, right) == false)
+			return false;	
+	};
+
+	return true;
+}
+
+function checkEachTree (tree, top, bottom, left, right) {
+	//caculate the top, bottom, left and right edges of the tree
+	var treeTop = getTopValue (tree);
+	var treeBottom = getHeightValue (tree) + treeTop;
+	var treeLeft = getLeftValue (tree);
+	var treeRight = getWidthValue (tree) + treeLeft;
+
+	//if the new position is within the tree, don't allow the move to occur
+	if ((top >= treeTop && top <= treeBottom) && (bottom >= treeTop && bottom <= treeBottom) && (left >= treeLeft && left <= treeRight) && (right >= treeLeft && right <= treeRight))
+					{ console.log("there is a tree there"); return false; }
+
+	else
+		return true;
+}
+
+function gotHoney () {
+	if (myObject.top>=410 && myObject.left>=410)
+		alert("You made it!");
+}
+
+//get the "top" value for this element as set in CSS
+function getTopValue (obj)
+{
+	var style = window.getComputedStyle(obj);
+	var top = style.getPropertyValue('top');
+	return parseInt(top.replace("px",""));
+}
+
+//get the "height" value for this element as set in CSS
+function getHeightValue (obj)
+{
+	var style = window.getComputedStyle(obj);
+	var height = style.getPropertyValue('height');
+	return parseInt(height.replace("px",""));
+}
+
+//get the "left" value for this element as set in CSS
+function getLeftValue (obj)
+{
+	var style = window.getComputedStyle(obj);
+	var left = style.getPropertyValue('left');
+	return parseInt(left.replace("px",""));
+}
+
+//get the "width" value for this element as set in CSS
+function getWidthValue (obj)
+{
+	var style = window.getComputedStyle(obj);
+	var width = style.getPropertyValue('width');
+	return parseInt(width.replace("px",""));
+}
+
+</script>
+
+</html>
+

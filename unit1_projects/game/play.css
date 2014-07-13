@@ -24,6 +24,8 @@ z-index: 10;
 }
 
 body {
+	background: url("mobilemaze.png");
+	background-repeat: no-repeat;
 	background-size: 100%;
 }
 
