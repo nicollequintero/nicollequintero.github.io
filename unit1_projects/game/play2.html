@@ -4,22 +4,19 @@
 	<meta charset="UTF-8">
 	<link type:"text/css" rel="stylesheet" href="play2.css">
 	<link href='http://fonts.googleapis.com/css?family=Oswald:700|Roboto+Slab:300' rel='stylesheet' type='text/css'>
+	<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
 	<!--<meta name="viewport" content="width=device-width, initial-scale =1.0, user-scalable =yes">-->
 	<title>Got Honey?</title>
 </head>
 
 <body onLoad="myObject.printOut(); createRandomEnvironment(); clock = setInterval(function(){updateTimer()},1000);">
 	<header>
-		<section id="buttons">
-			<button type="button" onClick="myObject.moveUp();">Move Up</button>
-			<button type="button" onClick="myObject.moveDown();">Move Down</button>
-			<button type="button" onClick="myObject.moveLeft();">Move Left</button>
-			<button type="button" onClick="myObject.moveRight();">Move Right</button>
-		</section>
+		<span>Got Honey?</span>
 	</header>
 	<nav>
 		<p> <span>Objective:</span> <br> Use the navigation buttons to help the ant get to the pot of honey. You won't be able to get through those sand dunes, so hurry up before time is over! </p>
 	</nav>
+	
 	<main id="forest">
 		<article id="babyBear"></article>
 		<article class = "tree" id ="tree1"></article>
@@ -34,11 +31,36 @@
 		<article class = "tree" id ="tree10"></article>
 		<article id = "honey"></article>
 	</main>
-		
+	
+	<aside>
+		<i class="fa fa-arrow-down"></i>
+		<section id="buttons">
+			<table>
+				<tr>
+					<td></td>
+					<td><button type="button" onClick="myObject.moveUp();">&#8593;</button></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td><button type="button" onClick="myObject.moveLeft();">&#8592;</button></td>
+					<td></td>
+					<td><button type="button" onClick="myObject.moveRight();">&#8594;</button></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td><button type="button" onClick="myObject.moveDown();">&#8595;</button></td>
+					<td></td>
+				</tr>
+			</table>
+		</section>
+	</aside>
+	
 	<footer>
 		<button type="button" onClick="createRandomEnvironment();">Move those sand dunes around!</button>
 		<p id="timer">GO!</p>
 	</footer>
+
+
 </body>
 
 <script type="text/javascript">

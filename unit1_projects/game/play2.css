@@ -1,9 +1,12 @@
+@charset "UTF-8";
 
 /**
  * html5doctor.com Reset Stylesheet v1.6.1 (http://html5doctor.com/html-5-reset-stylesheet/)
  * Richard Clark (http://richclarkdesign.com)
  * http://cssreset.com
  */
+
+
 html, body, div, span, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 abbr, address, cite, code,
@@ -18,8 +21,8 @@ footer, header, hgroup, menu, nav, section, summary,
 time, mark, audio, video {
     margin:0;
     padding:0;
-    border:0;
-    outline:0;
+    /*border:0;
+    outline:0;*/
     font-size:100%;
     vertical-align:baseline;
     background:transparent;
@@ -27,127 +30,88 @@ time, mark, audio, video {
 body {
     line-height:1;
 }
-article,aside,details,figcaption,figure,
-footer,header,hgroup,menu,nav,section {
-    display:block;
-}
-nav ul {
-    list-style:none;
-}
-blockquote, q {
-    quotes:none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-    content:'';
-    content:none;
-}
-a {
-    margin:0;
-    padding:0;
-    font-size:100%;
-    vertical-align:baseline;
-    background:transparent;
-    text-decoration: none;
-}
-/* change colours to suit your needs */
-ins {
-    background-color:#ff9;
-    color:#000;
-    text-decoration:none;
-}
-/* change colours to suit your needs */
-mark {
-    background-color:#ff9;
-    color:#000;
-    font-style:italic;
-    font-weight:bold;
-}
-del {
-    text-decoration: line-through;
-}
-abbr[title], dfn[title] {
-    border-bottom:1px dotted;
-    cursor:help;
-}
-table {
-    border-collapse:collapse;
-    border-spacing:0;
-}
-/* change border colour to suit your needs */
-hr {
-    display:block;
-    height:1px;
-    border:0;
-    border-top:1px solid #cccccc;
-    margin:1em 0;
-    padding:0;
-}
-input, select {
-    vertical-align:middle;
-}
 
+  
 /*
 ***********************************
 BEGIN MY OWN CSS
 ***********************************
 */
 
+* {
+	border: 0px solid black;
+}
+
 article, aside, footer, header, main, nav, section {
 	display: block;
 }
 
 body {
-	width: 1000px;
-	height: 100%;
+	width: 900px;
 	margin-left: auto;
 	margin-right: auto;
-	background: #F0F8FF;}
+	background: #F0F8FF;
+}
 
 main {
-	float right;
-	width: 700px;
 }
 
 nav {
 	float: left;
-	margin-left: 75px;
-	margin-top: 125px;
-	width: 150px;
-	display: block;
+	width: 180px;
 	font-family: 'Roboto Slab';
 	font-size: 1.25em;
-	padding: 5px;
 	color: black;
 	text-align: right;
+	padding: 10px;
+	margin-top: 150px;
+}
+
+aside {
+	float: left;
+	width: 180px;
+	padding: 10px;
+	position: relative;
+	height: 480px;
 }
 
 span {
 	font-family: 'Oswald';
-	font-size: 1.25em;
 }
-header {
 
+header {
+	font-size: 2em;
 	text-align: center;
 	padding: 10px;
 }
 
-
-footer {
-	position: absolute;
-	top: 560px;
-	margin-left: 275px;
+footer	{
+	clear: both;
+	width: 500px;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 10px;
 }
 
-header button {
+aside button {
 
-	height: 25px;
-	width: 125px;
+	height: 50px;
+	width: 50px;
 	background-color: yellow;
 	border: 2px solid black;
 	color: black;
-	font-size: 1em;
+	font-size: 2em;
 	border-radius: 10px;
+}
+
+aside table {
+	width: 100%;
+	text-align: center;
+}
+
+#buttons {
+	top: 30%;
+	position: absolute;
 }
 
 footer button {
@@ -164,7 +128,6 @@ footer button {
 
 #timer
 {
-	margin-left: 25px;
 	width: 100px;
 	background-color: black;
 	border-radius: 10px;
@@ -174,29 +137,31 @@ footer button {
 	padding: 5px;
 	float: right;
 	font-family: 'Roboto Slab';
-
 }
 
 
 #forest {
+	
 	width: 500px;
 	height: 500px;
-	margin-left: 250px;
+	background-color: blue;
+	float: left;
 	background-color: green;
 	border: 0px solid black;
-	position: absolute;
 	font-size:100px;
 	color:red;
 	text-align: center;
 	font-family: 'Oswald';
 	background-image: url("http://3.bp.blogspot.com/-XAyILqnw9LM/UmpMUn2ts2I/AAAAAAAAErI/gSq7wHUIMqo/s320/Tileable+classic+grass+texture.jpg");
 	overflow: hidden;
+	position: relative;
 }
 
 .tree {
 	background-color: black;
 	background-image: url("http://th05.deviantart.net/fs71/PRE/i/2010/291/3/4/seamless_desert_sand_texture_by_hhh316-d311qn7.jpg");
 }
+
 
 #tree1, #tree2, #tree3, #tree4, #tree5, #tree6, #tree7, #tree8, #tree9, #tree10 {
 	position: absolute;
@@ -205,20 +170,24 @@ footer button {
 #honey {
 	height: 90px;
 	width: 90px;
-	position: absolute;
-	top: 410px;
+	top:410px;
 	left:410px;
+	position: absolute;
 	background-image: url("honey.png");
-	z-index: 10;
+	z-index: 100;
 }
 
 #babyBear {
 	color:red;
 	top: 0px;
 	left:0px;
+	position: absolute;
 	height: 30px;
 	width: 30px;
 	background-image: url("ant.png");
-	position: absolute;
 	z-index: 10;
 }
+
+
+
+
