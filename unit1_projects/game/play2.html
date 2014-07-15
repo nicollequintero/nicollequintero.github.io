@@ -20,18 +20,6 @@
 	<main id="forest">
 		
 		<article id="ant"></article>
-		<!--
-		<article class = "anteater" id ="anteater1"></article>
-		<article class = "anteater" id ="anteater2"></article>
-		<article class = "anteater" id ="anteater3"></article>
-		<article class = "anteater" id ="anteater4"></article>
-		<article class = "anteater" id ="anteater5"></article>
-		<article class = "anteater" id ="anteater6"></article>
-		<article class = "anteater" id ="anteater7"></article>
-		<article class = "anteater" id ="anteater8"></article>
-		<article class = "anteater" id ="anteater9"></article>
-		<article class = "anteater" id ="anteater10"></article>
-		-->
 		<article id = "honey"></article>
 		
 	</main>
@@ -42,11 +30,13 @@
 			
 	
 		<section id="startButtons">
+			
 			<button type="button" id="easyButton" onClick="createAntEaters(7); createRandomEnvironment(); clock = setInterval(function(){updateTimer()},1000); disableMedium(); disableHard();">Easy</button>
 
 			<button type="button" id="mediumButton" onClick="createAntEaters(14); createRandomEnvironment(); clock = setInterval(function(){updateTimer()},1000); disableEasy(); disableHard();">Medium</button>
 
 			<button type="button" id="hardButton" onClick="createAntEaters(21); createRandomEnvironment(); clock = setInterval(function(){updateTimer()},1000); disableMedium(); disableEasy();">Hard</button>
+		
 		</section>	
 
 		<section id="navButtons">
@@ -68,6 +58,9 @@
 				</tr>
 			</table>
 		</section>
+
+		<button type="button" id="replayButton" onClick="history.go(0)">Play Again</button>
+
 	</aside>
 	
 	<footer>
@@ -187,6 +180,10 @@ function updateTimer () {
 	if(startTime== 20)
 		{ 	clearInterval(clock); 
 			document.getElementById("forest").innerHTML = "GAME OVER!";
+			disableEasy();
+			disableMedium();
+			disableHard();
+			document.getElementById("replayButton").style.visibility ="visible";
 			return; }
 	
 	//change the anteaters mid-way to add difficulty

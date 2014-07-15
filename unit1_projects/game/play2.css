@@ -73,6 +73,7 @@ aside {
 	padding: 10px;
 	position: relative;
 	height: 480px;
+	text-align: center;
 }
 
 aside table {
@@ -81,7 +82,6 @@ aside table {
 
 #buttons {
 	position: absolute;
-	text-align: center;
 	top: 10%;
 }
 
@@ -104,7 +104,6 @@ footer	{
 }
 
 #startButtons {
-	text-align: center;
 	margin-bottom: 30px;
 }
 
@@ -118,6 +117,19 @@ footer	{
 	font-size: 1.5em;
 	border-radius: 10px;
 	margin-top: 10px;
+}
+
+#replayButton {
+	border: 1px solid black;
+	height: 50px;
+	width: 150px;
+	background-color: #00CC33;
+	border: 2px solid black;
+	color: black;
+	font-size: 1.5em;
+	border-radius: 10px;
+	margin-top: 30px;
+	visibility: hidden;
 }
 
 #navButtons table 	button {
