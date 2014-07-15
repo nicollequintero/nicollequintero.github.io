@@ -64,7 +64,7 @@ nav {
 	color: black;
 	text-align: right;
 	padding: 10px;
-	margin-top: 150px;
+	margin-top: 100px;
 }
 
 aside {
@@ -82,7 +82,7 @@ aside table {
 #buttons {
 	position: absolute;
 	text-align: center;
-	top: 25%;
+	top: 10%;
 }
 
 span {
@@ -103,18 +103,24 @@ footer	{
 	padding: 10px;
 }
 
-#startButton {
+#startButtons {
+	text-align: center;
+	margin-bottom: 30px;
+}
+
+#easyButton, #mediumButton, #hardButton {
 	border: 1px solid black;
 	height: 50px;
 	width: 150px;
 	background-color: yellow;
 	border: 2px solid black;
 	color: black;
-	font-size: 2em;
+	font-size: 1.5em;
 	border-radius: 10px;
+	margin-top: 10px;
 }
 
-#buttons table 	button {
+#navButtons table 	button {
 
 	height: 50px;
 	width: 50px;
@@ -146,7 +152,7 @@ footer button {
 
 #timer
 {
-	width: 100px;
+	width: 150px;
 	background-color: black;
 	border-radius: 10px;
 	color: red;
@@ -170,18 +176,14 @@ footer button {
 	color:red;
 	text-align: center;
 	font-family: 'Oswald';
-	background-image: url("http://3.bp.blogspot.com/-XAyILqnw9LM/UmpMUn2ts2I/AAAAAAAAErI/gSq7wHUIMqo/s320/Tileable+classic+grass+texture.jpg");
+	background-image: url("grass.jpg");
 	overflow: hidden;
 	position: relative;
 }
 
-.tree {
+.anteater {
 	background-image: url("anteater.png");
 	position: absolute;
-}
-
-
-#tree1, #tree2, #tree3, #tree4, #tree5, #tree6, #tree7, #tree8, #tree9, #tree10 {
 	position: absolute;
 	height: 60px;
 	width: 90px;
@@ -198,7 +200,7 @@ footer button {
 	z-index: 100;
 }
 
-#babyBear {
+#ant {
 	color:red;
 	position: absolute;
 	height: 30px;

@@ -14,30 +14,42 @@
 		<span>Got Honey?</span>
 	</header>
 	<nav>
-		<p> <span>Objective:</span> <br> Use the navigation buttons to help the ant get to the pot of honey. <br><br>You won't be able to get through those anteasters, so hurry up before time is over! </p>
+		<p> <span>Objective:</span> <br> Use the navigation buttons to help the ant get to the pot of honey. <br><br>You won't be able to get through those anteasters, so watch out! <br><br> You have 20 seconds, beware that the anteaters don't sit still!</p>
 	</nav>
 	
 	<main id="forest">
-		<article id="babyBear"></article>
-		<article class = "tree" id ="tree1"></article>
-		<article class = "tree" id ="tree2"></article>
-		<article class = "tree" id ="tree3"></article>
-		<article class = "tree" id ="tree4"></article>
-		<article class = "tree" id ="tree5"></article>
-		<article class = "tree" id ="tree6"></article>
-		<article class = "tree" id ="tree7"></article>
-		<article class = "tree" id ="tree8"></article>
-		<article class = "tree" id ="tree9"></article>
-		<article class = "tree" id ="tree10"></article>
+		
+		<article id="ant"></article>
+		<!--
+		<article class = "anteater" id ="anteater1"></article>
+		<article class = "anteater" id ="anteater2"></article>
+		<article class = "anteater" id ="anteater3"></article>
+		<article class = "anteater" id ="anteater4"></article>
+		<article class = "anteater" id ="anteater5"></article>
+		<article class = "anteater" id ="anteater6"></article>
+		<article class = "anteater" id ="anteater7"></article>
+		<article class = "anteater" id ="anteater8"></article>
+		<article class = "anteater" id ="anteater9"></article>
+		<article class = "anteater" id ="anteater10"></article>
+		-->
 		<article id = "honey"></article>
+		
 	</main>
 	
 	<aside>
 		
-		<section id="buttons">
+		
 			
-			<button type="button" id="startButton" onClick="createRandomEnvironment(); clock = setInterval(function(){updateTimer()},1000);">Start Game</button>
+	
+		<section id="startButtons">
+			<button type="button" id="easyButton" onClick="createAntEaters(7); createRandomEnvironment(); clock = setInterval(function(){updateTimer()},1000); disableMedium(); disableHard();">Easy</button>
 
+			<button type="button" id="mediumButton" onClick="createAntEaters(14); createRandomEnvironment(); clock = setInterval(function(){updateTimer()},1000); disableEasy(); disableHard();">Medium</button>
+
+			<button type="button" id="hardButton" onClick="createAntEaters(21); createRandomEnvironment(); clock = setInterval(function(){updateTimer()},1000); disableMedium(); disableEasy();">Hard</button>
+		</section>	
+
+		<section id="navButtons">
 			<table>
 				<tr>
 					<td></td>
@@ -60,7 +72,7 @@
 	
 	<footer>
 		<button type="button" onClick="createRandomEnvironment();">Move those anteaters around!</button>
-		<p id="timer">Press Start!</p>
+		<p id="timer">Choose Level</p>
 	</footer>
 
 
@@ -73,36 +85,35 @@ var clock;
 var size = 30;
 
 var myObject =  {
-	outline: "",
 	top:0,
 	left:0,
 	printOut: function () {
-			document.getElementById("babyBear").style.top =  myObject.top+"px";
-			document.getElementById("babyBear").style.left =  myObject.left+"px";
+			document.getElementById("ant").style.top =  myObject.top+"px";
+			document.getElementById("ant").style.left =  myObject.left+"px";
 		},
 	moveUp: function () {
-			if(myObject.top>0 && noTreeThere(myObject.top-size, myObject.top, myObject.left, myObject.left+size)) {
+			if(myObject.top>0 && noAnteaterThere(myObject.top-size, myObject.top, myObject.left, myObject.left+size)) {
 			myObject.top-=size;
 			console.log("top margin is"+myObject.top);
 			myObject.printOut();
 			gotHoney(); }
 		},
 	moveDown: function () {
-			if(myObject.top<450 && noTreeThere(myObject.top+size, myObject.top+size+size, myObject.left, myObject.left+size)) {
+			if(myObject.top<450 && noAnteaterThere(myObject.top+size, myObject.top+size+size, myObject.left, myObject.left+size)) {
 			myObject.top+=size;
 			console.log("top margin is"+myObject.top);
 			myObject.printOut(); 
 			gotHoney();}
 		},
 	moveLeft: function () {
-			if(myObject.left>0 && noTreeThere(myObject.top, myObject.top+size, myObject.left-size, myObject.left)) {
+			if(myObject.left>0 && noAnteaterThere(myObject.top, myObject.top+size, myObject.left-size, myObject.left)) {
 			myObject.left-=size;
 			console.log("left margin is"+myObject.left);
 			myObject.printOut(); 
 			gotHoney();}
 		},
 	moveRight: function () {
-			if(myObject.left<450 && noTreeThere(myObject.top, myObject.top+size, myObject.left+size, myObject.left+size+size)) {
+			if(myObject.left<450 && noAnteaterThere(myObject.top, myObject.top+size, myObject.left+size, myObject.left+size+size)) {
 			myObject.left+=size;
 			console.log("left margin is"+myObject.left);
 			myObject.printOut(); 
@@ -110,49 +121,99 @@ var myObject =  {
 		},
 };
 
-var allTrees = [document.getElementById("tree1"),document.getElementById("tree2"),document.getElementById("tree3"),document.getElementById("tree4"),document.getElementById("tree5"),document.getElementById("tree6"),document.getElementById("tree7"),document.getElementById("tree8"),document.getElementById("tree9"),document.getElementById("tree10")];
+var allAnteaters = [];
+
+function createAntEaters (num) {
+
+	//setting up variable to allow for rewriting inner HTML
+	var linepart2 = "\"></article>";
+	var linepart1 = "<article class = \"anteater\" id =\"anteater";
+	var putlinestogether = "";
+	var newHTML = "<article id=\"ant\"></article>";
+	var el = "";
+
+	//add a new anteater line based on the difficult chosen
+	for (var x = 1; x<= num; x++) {	
+		
+		putlinestogether = linepart1+x+linepart2;
+		newHTML= newHTML.concat(putlinestogether);
+		};	
+
+	//add the honey to the end of the HTML
+	newHTML = newHTML.concat("<article id = \"honey\"></article>")
+
+	document.getElementById("forest").innerHTML= newHTML;
+
+	//fill the array with each anteater
+	for (var x = 1; x<= num; x++) {	
+		
+		el = "anteater"+x;
+		allAnteaters.push(document.getElementById(el));
+		};	
+} 
+
+function disableEasy () {
+
+	document.getElementById("easyButton").disabled=true;
+	document.getElementById("easyButton").style.backgroundColor="#d3d3d3";
+	document.getElementById("easyButton").style.color="#a8a8a8";
+}
+
+function disableMedium () {
+
+	document.getElementById("mediumButton").disabled=true;
+	document.getElementById("mediumButton").style.backgroundColor="#d3d3d3";
+	document.getElementById("mediumButton").style.color="#a8a8a8";
+}
+
+function disableHard () {
+
+	document.getElementById("hardButton").disabled=true;
+	document.getElementById("hardButton").style.backgroundColor="#d3d3d3";
+	document.getElementById("hardButton").style.color="#a8a8a8";
+}
+
 
 function createRandomEnvironment () {
-	//go through the allTrees array one element at a time
-
-
-	for (var x = 0; x < allTrees.length; x++) {
-		assignTreeRandomProperties(allTrees[x]);
+	//go through the allAnteaters array one element at a time to assign random properties
+	for (var x = 0; x < allAnteaters.length; x++) {
+		assignAnteaterRandomProperties(allAnteaters[x]);
 	};
 }
 
 function updateTimer () {	
+	
 	//if time is up, stop clock and show game over
 	if(startTime== 20)
 		{ 	clearInterval(clock); 
 			document.getElementById("forest").innerHTML = "GAME OVER!";
 			return; }
 	
+	//change the anteaters mid-way to add difficulty
 	if(startTime == 10)
 			createRandomEnvironment ();
 	
 
 	startTime+=1;
-
-	document.getElementById("timer").innerHTML = (startTime);
 	
+	//print the time out in the counter
 	if(startTime ==1)
 		document.getElementById("timer").innerHTML = startTime +" second";
 	else
 		document.getElementById("timer").innerHTML = startTime +" seconds";
 }
 
-function assignTreeRandomProperties(tree) {
+function assignAnteaterRandomProperties(anteater) {
 	
-	var newTreeLeft = randomIntFromInterval(30,410);
-	var newTreeTop = randomIntFromInterval(30,410);
-	tree.style.top = newTreeTop+"px";;
-	tree.style.left = newTreeLeft+"px";;
-	tree.style.visibility="visible";
+	var newAnteaterLeft = randomIntFromInterval(30,410);
+	var newAnteaterTop = randomIntFromInterval(30,410);
+	anteater.style.top = newAnteaterTop+"px";;
+	anteater.style.left = newAnteaterLeft+"px";;
+	anteater.style.visibility="visible";
 
-	//if the tree would fall on the honey, assign new random properties to avoid this
-	if ((newTreeTop+60 >= 410) && (newTreeLeft+90 >= 410))
-		assignTreeRandomProperties(tree);
+	//if the anteater would fall on the honey, assign new random properties to avoid this
+	if ((newAnteaterTop+60 >= 410) && (newAnteaterLeft+90 >= 410))
+		assignAnteaterRandomProperties(anteater);
 }
 
 function randomIntFromInterval(min,max)
@@ -161,26 +222,26 @@ function randomIntFromInterval(min,max)
     return Math.round((Math.floor(Math.random()*(max-min+1)+min))/size)*size;
 }
 
-function noTreeThere (top, bottom, left, right) {
-	//go through the allTrees array one element at a time
-	for (var x = 0; x < allTrees.length; x++) {
-		if (checkEachTree (allTrees[x], top, bottom, left, right) == false)
+function noAnteaterThere (top, bottom, left, right) {
+	//go through the allAnteaters array one element at a time to check if an anteater is in the way 
+	for (var x = 0; x < allAnteaters.length; x++) {
+		if (checkEachAnteater (allAnteaters[x], top, bottom, left, right) == false)
 			return false;	
 	};
 
 	return true;
 }
 
-function checkEachTree (tree, top, bottom, left, right) {
-	//caculate the top, bottom, left and right edges of the tree
-	var treeTop = getTopValue (tree);
-	var treeBottom = getHeightValue (tree) + treeTop;
-	var treeLeft = getLeftValue (tree);
-	var treeRight = getWidthValue (tree) + treeLeft;
+function checkEachAnteater (anteater, top, bottom, left, right) {
+	//caculate the top, bottom, left and right edges of the anteater
+	var anteaterTop = getTopValue (anteater);
+	var anteaterBottom = getHeightValue (anteater) + anteaterTop;
+	var anteaterLeft = getLeftValue (anteater);
+	var anteaterRight = getWidthValue (anteater) + anteaterLeft;
 
-	//if the new position is within the tree, don't allow the move to occur
-	if ((top >= treeTop && top <= treeBottom) && (bottom >= treeTop && bottom <= treeBottom) && (left >= treeLeft && left <= treeRight) && (right >= treeLeft && right <= treeRight))
-					{ console.log("there is a tree there"); return false; }
+	//if the new position is within the anteater, don't allow the move to occur
+	if ((top >= anteaterTop && top <= anteaterBottom) && (bottom >= anteaterTop && bottom <= anteaterBottom) && (left >= anteaterLeft && left <= anteaterRight) && (right >= anteaterLeft && right <= anteaterRight))
+					{ console.log("there is a anteater there"); return false; }
 
 	else
 		return true;
