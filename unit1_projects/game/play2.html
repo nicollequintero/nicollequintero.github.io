@@ -205,7 +205,7 @@ function moveEachAnteater(anteater) {
 
 	if ((myObject.top >= anteaterTop && myObject.top <= anteaterBottom) && (myObject.top+10 >= anteaterTop && myObject.top+10 <= anteaterBottom) && (myObject.left >= anteaterLeft && myObject.left <= anteaterRight) && (myObject.left+10 >= anteaterLeft && myObject.left+10 <= anteaterRight))
 			{ 	clearInterval(clock); 
-			document.getElementById("forest").innerHTML = "YOU\'RE DEAD!";
+			document.getElementById("forest").innerHTML = "YOU\'VE BEEN EATEN!";
 			disableEasy();
 			disableMedium();
 			disableHard();
