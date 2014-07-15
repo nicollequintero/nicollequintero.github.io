@@ -92,7 +92,7 @@ var myObject =  {
 			gotHoney(); }
 		},
 	moveDown: function () {
-			if(myObject.top<450 && noAnteaterThere(myObject.top+size, myObject.top+size+size, myObject.left, myObject.left+size)) {
+			if(myObject.top<550 && noAnteaterThere(myObject.top+size, myObject.top+size+size, myObject.left, myObject.left+size)) {
 			myObject.top+=size;
 			console.log("top margin is"+myObject.top);
 			myObject.printOut(); 
@@ -106,7 +106,7 @@ var myObject =  {
 			gotHoney();}
 		},
 	moveRight: function () {
-			if(myObject.left<450 && noAnteaterThere(myObject.top, myObject.top+size, myObject.left+size, myObject.left+size+size)) {
+			if(myObject.left<650 && noAnteaterThere(myObject.top, myObject.top+size, myObject.left+size, myObject.left+size+size)) {
 			myObject.left+=size;
 			console.log("left margin is"+myObject.left);
 			myObject.printOut(); 
@@ -174,6 +174,29 @@ function createRandomEnvironment () {
 	};
 }
 
+function moveAnteaters() {
+	//go through the allAnteaters array one element at a time to assign random properties
+	
+	console.log("entering moveAnteaters");
+	for (var x = 0; x < allAnteaters.length; x++) {
+		moveEachAnteater(allAnteaters[x]);
+	};
+
+}
+
+function moveEachAnteater(anteater) {
+		
+	var newLeftpos = getLeftValue(anteater) - size;
+
+	//if new position would fall within honey, don't move anteater
+	if(newLeftpos+90 >=610 && getTopValue(anteater)>= 510)
+		return;
+
+	anteater.style.left = newLeftpos+"px";
+	anteater.style.visibility="visible";
+
+}
+
 function updateTimer () {	
 	
 	//if time is up, stop clock and show game over
@@ -185,13 +208,10 @@ function updateTimer () {
 			disableHard();
 			document.getElementById("replayButton").style.visibility ="visible";
 			return; }
-	
-	//change the anteaters mid-way to add difficulty
-	if(startTime == 10)
-			createRandomEnvironment ();
-	
 
 	startTime+=1;
+	moveAnteaters();
+
 	
 	//print the time out in the counter
 	if(startTime ==1)
@@ -200,10 +220,11 @@ function updateTimer () {
 		document.getElementById("timer").innerHTML = startTime +" seconds";
 }
 
+
 function assignAnteaterRandomProperties(anteater) {
 	
-	var newAnteaterLeft = randomIntFromInterval(30,410);
-	var newAnteaterTop = randomIntFromInterval(30,410);
+	var newAnteaterLeft = randomIntFromInterval(30,700);
+	var newAnteaterTop = randomIntFromInterval(30,600);
 	anteater.style.top = newAnteaterTop+"px";;
 	anteater.style.left = newAnteaterLeft+"px";;
 	anteater.style.visibility="visible";
@@ -245,7 +266,7 @@ function checkEachAnteater (anteater, top, bottom, left, right) {
 }
 
 function gotHoney () {
-	if (myObject.top>=410 && myObject.left>=410)
+	if (myObject.top>=510 && myObject.left>=610)
 		{	clearInterval(clock); 
 			document.getElementById("forest").innerHTML = "You Made It!";
 		}
