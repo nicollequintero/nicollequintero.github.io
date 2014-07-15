@@ -9,12 +9,12 @@
 	<title>Got Honey?</title>
 </head>
 
-<body onLoad="myObject.printOut(); createRandomEnvironment(); clock = setInterval(function(){updateTimer()},1000);">
+<body onLoad="myObject.printOut();">
 	<header>
 		<span>Got Honey?</span>
 	</header>
 	<nav>
-		<p> <span>Objective:</span> <br> Use the navigation buttons to help the ant get to the pot of honey. You won't be able to get through those sand dunes, so hurry up before time is over! </p>
+		<p> <span>Objective:</span> <br> Use the navigation buttons to help the ant get to the pot of honey. <br><br>You won't be able to get through those anteasters, so hurry up before time is over! </p>
 	</nav>
 	
 	<main id="forest">
@@ -35,6 +35,9 @@
 	<aside>
 		
 		<section id="buttons">
+			
+			<button type="button" id="startButton" onClick="createRandomEnvironment(); clock = setInterval(function(){updateTimer()},1000);">Start Game</button>
+
 			<table>
 				<tr>
 					<td></td>
@@ -56,8 +59,8 @@
 	</aside>
 	
 	<footer>
-		<button type="button" onClick="createRandomEnvironment();">Move those sand dunes around!</button>
-		<p id="timer">GO!</p>
+		<button type="button" onClick="createRandomEnvironment();">Move those anteaters around!</button>
+		<p id="timer">Press Start!</p>
 	</footer>
 
 
@@ -111,6 +114,8 @@ var allTrees = [document.getElementById("tree1"),document.getElementById("tree2"
 
 function createRandomEnvironment () {
 	//go through the allTrees array one element at a time
+
+
 	for (var x = 0; x < allTrees.length; x++) {
 		assignTreeRandomProperties(allTrees[x]);
 	};
@@ -118,27 +123,36 @@ function createRandomEnvironment () {
 
 function updateTimer () {	
 	//if time is up, stop clock and show game over
-	if(startTime == 20)
+	if(startTime== 20)
 		{ 	clearInterval(clock); 
 			document.getElementById("forest").innerHTML = "GAME OVER!";
-			//document.getElementById("forest").style.backgroundColor = black;
-			//document.getElementById("forest").style.backgroundImage = "none";
 			return; }
 	
-	startTime++;
+	if(startTime == 10)
+			createRandomEnvironment ();
+	
+
+	startTime+=1;
+
+	document.getElementById("timer").innerHTML = (startTime);
 	
 	if(startTime ==1)
-		document.getElementById("timer").innerHTML = startTime+" second";
+		document.getElementById("timer").innerHTML = startTime +" second";
 	else
-		document.getElementById("timer").innerHTML = startTime+" seconds";
+		document.getElementById("timer").innerHTML = startTime +" seconds";
 }
 
 function assignTreeRandomProperties(tree) {
 	
-	tree.style.top = randomIntFromInterval(30,450)+"px";
-	tree.style.left = randomIntFromInterval(30,450)+"px";
-	tree.style.height = randomIntFromInterval(30,100)+"px";
-	tree.style.width = randomIntFromInterval(30,100)+"px";
+	var newTreeLeft = randomIntFromInterval(30,410);
+	var newTreeTop = randomIntFromInterval(30,410);
+	tree.style.top = newTreeTop+"px";;
+	tree.style.left = newTreeLeft+"px";;
+	tree.style.visibility="visible";
+
+	//if the tree would fall on the honey, assign new random properties to avoid this
+	if ((newTreeTop+60 >= 410) && (newTreeLeft+90 >= 410))
+		assignTreeRandomProperties(tree);
 }
 
 function randomIntFromInterval(min,max)
