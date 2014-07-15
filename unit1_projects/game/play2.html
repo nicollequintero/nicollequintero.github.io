@@ -194,12 +194,29 @@ function moveEachAnteater(anteater) {
 
 	anteater.style.left = newLeftpos+"px";
 	anteater.style.visibility="visible";
+		
+
+	//check if the Anteater has moved on top of the ant, if so, end the game
+	//caculate the top, bottom, left and right edges of the anteater
+	var anteaterTop = getTopValue (anteater);
+	var anteaterBottom = getHeightValue (anteater) + anteaterTop;
+	var anteaterLeft = getLeftValue (anteater);
+	var anteaterRight = getWidthValue (anteater) + anteaterLeft;
+
+	if ((myObject.top >= anteaterTop && myObject.top <= anteaterBottom) && (myObject.top+10 >= anteaterTop && myObject.top+10 <= anteaterBottom) && (myObject.left >= anteaterLeft && myObject.left <= anteaterRight) && (myObject.left+10 >= anteaterLeft && myObject.left+10 <= anteaterRight))
+			{ 	clearInterval(clock); 
+			document.getElementById("forest").innerHTML = "YOU\'RE DEAD!";
+			disableEasy();
+			disableMedium();
+			disableHard();
+			document.getElementById("replayButton").style.visibility ="visible";
+			return; }
 
 }
 
 function updateTimer () {	
 	
-	//if time is up, stop clock and show game over
+	//if time is up, stop clock, show game over and enable replay button
 	if(startTime== 20)
 		{ 	clearInterval(clock); 
 			document.getElementById("forest").innerHTML = "GAME OVER!";
@@ -209,6 +226,7 @@ function updateTimer () {
 			document.getElementById("replayButton").style.visibility ="visible";
 			return; }
 
+	//move the clock forward and move the anteaters
 	startTime+=1;
 	moveAnteaters();
 
@@ -223,7 +241,7 @@ function updateTimer () {
 
 function assignAnteaterRandomProperties(anteater) {
 	
-	var newAnteaterLeft = randomIntFromInterval(30,700);
+	var newAnteaterLeft = randomIntFromInterval(30,1000);
 	var newAnteaterTop = randomIntFromInterval(30,600);
 	anteater.style.top = newAnteaterTop+"px";;
 	anteater.style.left = newAnteaterLeft+"px";;
