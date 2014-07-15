@@ -287,6 +287,11 @@ function gotHoney () {
 	if (myObject.top>=510 && myObject.left>=610)
 		{	clearInterval(clock); 
 			document.getElementById("forest").innerHTML = "You Made It!";
+			disableEasy();
+			disableMedium();
+			disableHard();
+			document.getElementById("replayButton").style.visibility ="visible";
+			return; 
 		}
 }
 
