@@ -1,0 +1,192 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<link type:"text/css" rel="stylesheet" href="blog.css"/>
+	<title>One Day at a Time</title>
+	<meta name="description" content="Musings on doing the impossible">
+	<meta name="viewport" content="width=device-width, initial-scale =1.0, user-scalable =no">
+</head>
+<body>
+	<div class="heading">
+		<p class="logo">One Day at a Time</p>
+	</div> <!--End of heading-->
+	
+	<div class="subheading">
+		<div class = "subtitle">Musings on doing the impossible</div>
+		<div class = "socialmedia">
+			<a href="http://www.facebook.com/nicolle"><img src="images/fb_logo.png"/></a>
+			
+			<a href="http://www.twitter.com/facebookchica" id="twitter"><img src="images/twitter_logo.png"/></a>
+			
+			<a href="mailto:nicolle.quintero@gmail.com"><img src="images/gmail_logo.png"/></a>
+		</div> <!--End of socialmedia-->
+	</div> <!--End of subheading-->
+	
+	<div class = "circlecontainer">
+		<div class="circleborder"></div>
+		<div class="circleborder"></div>
+		<div class="circleborder"></div>
+		<div class="circleborder"></div>
+		<div class="circleborder"></div>
+		<div class="circleborder"></div>
+		<div class="circleborder"></div>
+		<div class="circleborder"></div>
+		<div class="circleborder"></div>
+		<div class="circleborder"></div>
+		<div class="circleborder"></div>
+		<div class="circleborder"></div>
+		<div class="circleborder"></div>
+		<div class="circleborder"></div>
+		<div class="circleborder"></div>
+		<div class="circleborder"></div>
+		<div class="circleborder"></div>
+		<div class="circleborder"></div>
+		<div class="circleborder"></div>
+		<div class="circleborder"></div>
+		<div class="circleborder"></div>
+		<div class="circleborder"></div>
+		<div class="circleborder"></div>
+		<div class="circleborder"></div>
+		<div class="circleborder"></div>
+		<div class="circleborder"></div>
+		<div class="circleborder"></div>
+		<div class="circleborder"></div>
+		<div class="circleborder"></div>
+		<div class="circleborder"></div>
+		<div class="circleborder"></div>
+		<div class="circleborder"></div>
+		<div class="circleborder"></div>
+		<div class="circleborder"></div>
+		<div class="circleborder"></div>
+		<div class="circleborder"></div>
+		<div class="circleborder"></div>
+		<div class="circleborder"></div>
+		<div class="circleborder"></div>
+		<div class="circleborder"></div>
+		<div class="circleborder"></div>
+		<div class="circleborder"></div>
+		<div class="circleborder"></div>
+		<div class="circleborder"></div>
+		<div class="circleborder"></div>
+		<div class="circleborder"></div>
+		<div class="circleborder"></div>
+		<div class="circleborder"></div>
+		<div class="circleborder"></div>
+		<div class="circleborder"></div>
+		<div class="circleborder"></div>
+		<div class="circleborder"></div>
+		<div class="circleborder"></div>
+		<div class="circleborder"></div>
+		<div class="circleborder"></div>
+		<div class="circleborder"></div>
+		<div class="circleborder"></div>
+		<div class="circleborder"></div>
+		<div class="circleborder"></div>
+		<div class="circleborder"></div>
+		<div class="circleborder"></div>
+		<div class="circleborder"></div>
+		<div class="circleborder"></div>
+		<div class="circleborder"></div>
+	
+
+	</div>
+
+	<div class="contentcontainer">
+
+		<div class="sidemenu">
+
+			<p id="authorimage"><img src="images/nicolle.png"/></p>
+
+			<p id="abouttext">I'm a former sales manager trying to make it to the other side of the office. Follow me as I struggle to become right-brained again.</p>
+
+			<p class="bloglink"><a href="week1_cultural.html">Culural Blog</a></p>
+			<p class="bloglink">Hanging the Mona Lisa</p>
+			<p class="bloglink"><a href="week1_technical.html">What's in a Design?</a></p>
+		</div> <!--End of sidemenu-->
+
+		<div class="content">
+
+		
+			<p class="entrytitle"> Enumerating through Fitness Bootcamp </p>
+			<p class = "entrydate"> July 20, 2014</p>
+
+			<p class = "entrytext">
+				Enumerable methods are built-in features of Ruby that allow us to manipulate data easily. One way to think about it is that someone thought of all the common things you'd want to do with data - sort it, find the largest value, find the smallest value, etc. and did 99% of the work for you. All that's left is to call that method into action when you need it.
+				<br><br>
+				Enumerable#map
+				<br><br>
+				The map method looks through your list of data (for example, string, hash, array) and performs a block of code on every single item.
+				<br><br>
+				Let's enroll in Fitness Bootcamp! You are a gym that has a list (in this case, an array) of people who want to sign up for your classes. 
+				<br><br>
+				prospects = ["Nicolle","Sarah","Mark","Mike"]
+				<br><br>
+				The map method allows you to do something to each of those elements in your prospects. In this case, let's go ahead and print a statement that each prospect is now enrolled. Map will execute the block of code for every element of that array.
+				<br><br>
+				prospects.map { |member| puts member+" is now enrolled in Fitness Bootcamp"}
+				<br><br>
+				RESULT<br>
+				Nicolle is now enrolled in Fitness Bootcamp<br>
+				Sarah is now enrolled in Fitness Bootcamp<br>
+				Mark is now enrolled in Fitness Bootcamp<br>
+				Mike is now enrolled in Fitness Bootcamp<br><br>
+				Enumerable#group_by
+				<br><br>
+				Now that we have our members enrolled, we also keep track of their fitness progress. In this instance, we've recorded how many situps each person can do in a minute. We've stored this data into a hash.
+				<br><br>
+				members = {
+					"Nicolle": 40,
+					"Sarah": 30,
+					"Mark": 50,
+					"Mike": 20
+				}
+				<br><br>
+				The group_by method allows you to group the elements in your hash by a criteria of your choosing. In our case, we want to separate those who can do 40 or more pushups in a minute, from those who cannot. We'll end up with two groups - advanced and beginner. These new terms "Advanced" and "Beginner" will be the keys in a new hash. The values to these keys will be the name and number of situps of those who fall into each category.
+				<br><br>
+				members.group_by {|person, situps| situps >=40 ? "Advanced": "Beginner"}
+				<br><br>
+				RESULT<br>
+				{"Advanced"=>[[:"Nicolle", 40], [:"Mark", 50]], "Beginner"=>[[:"Sarah", 30], [:"Mike", 20]]}
+				<br><br>
+				Let's say you have a series of exercises you want each member of Fitness Bootcamp do to. In order to give clear directions, you'll want to print out detailed directions reflecting how many times they are to do each exercise.
+				<br><br>
+				In this case, we're representing the steps to do a burpee in an array.
+				<br><br>
+				burpee_steps = ["squat with your hands on the floor in front of you","kick your feet back to plank position", "return your feet to the squat positions", "leap up as high as possible"]
+				<br><br>
+				The cycle method allows you to execute a block of code for each element in your array any number of times you desire. If I want my members to do 10 burpees, then I'll cycle through the array 10 times and print each step along the way.
+				<br><br>
+				burpee_steps.cycle(5) { |step| puts step } 
+				<br><br>
+				RESULT
+				<br>squat with your hands on the floor in front of you
+				<br>kick your feet back to plank position
+				<br>return your feet to the squat positions
+				<br>leap up as high as possible
+				<br>squat with your hands on the floor in front of you
+				<br>kick your feet back to plank position
+				<br>return your feet to the squat positions
+				<br>leap up as high as possible
+				<br>squat with your hands on the floor in front of you
+				<br>kick your feet back to plank position
+				<br>return your feet to the squat positions
+				<br>leap up as high as possible
+				<br>squat with your hands on the floor in front of you
+				<br>kick your feet back to plank position
+				<br>return your feet to the squat positions
+				<br>leap up as high as possible
+				<br>squat with your hands on the floor in front of you
+				<br>kick your feet back to plank position
+				<br>return your feet to the squat positions
+				<br>leap up as high as possible
+			</p>
+
+		</div> <!--End of content-->
+	</div> <!--End of contentcontainer-->
+
+	<div class="footer">
+		<a name = "footer"/>
+		<p>Quintero Consulting Group - All Right Reserved</p>
+	</div> <!--End of footer-->
+</body>
+</html>
