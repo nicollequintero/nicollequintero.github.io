@@ -35,7 +35,7 @@
 
 			<button type="button" id="mediumButton" onClick="createAntEaters(14); createRandomEnvironment(); clock = setInterval(function(){updateTimer()},1000); disableEasy(); disableHard();">Medium</button>
 
-			<button type="button" id="hardButton" onClick="createAntEaters(21); createRandomEnvironment(); clock = setInterval(function(){updateTimer()},1000); disableMedium(); disableEasy();">Hard</button>
+			<button type="button" id="hardButton" onClick="createAntEaters(41); createRandomEnvironment(); clock = setInterval(function(){updateTimer()},1000); disableMedium(); disableEasy();">Hard</button>
 		
 		</section>	
 
@@ -241,7 +241,7 @@ function updateTimer () {
 
 function assignAnteaterRandomProperties(anteater) {
 	
-	var newAnteaterLeft = randomIntFromInterval(30,1000);
+	var newAnteaterLeft = randomIntFromInterval(30,1200);
 	var newAnteaterTop = randomIntFromInterval(30,600);
 	anteater.style.top = newAnteaterTop+"px";;
 	anteater.style.left = newAnteaterLeft+"px";;

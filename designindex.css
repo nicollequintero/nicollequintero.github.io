@@ -92,9 +92,6 @@ html {
 	color: #29221F;
 }
 
-.testing {
-	background-color: black;
-}
 
 .header {
 	background-color: #0ABFBC;
@@ -102,18 +99,15 @@ html {
 	border-bottom: 1px solid #13747D;
 }
 
-.altheader {
-	background-color: #FC354C;
-	text-align: center;
-	border-bottom: 1px solid #13747D;
-}
-
 footer {
 	background-color: #29221F;
-	color: #FCF7C5;
+	color: white;
 	font-family: 'Roboto Slab';
-	font-size: 1em;
+	font-size: .75em;
+	padding-top: 1em;
+	padding-bottom: 1em;
 }
+
 
 .listcolumn {
 	float: right;
@@ -221,10 +215,46 @@ td {
 	color: #13747D;
 }
 
-img {
-	border: 1px solid #FCF7C5;
+.thickBorder img {
+	border: 1px solid #0ABFBC;
 }
 
-.thickBorder img {
-	border: 3px solid #0ABFBC;
+#footerlinks {
+	margin-right: auto;
+	margin-left: auto;
+	color: white;
 }
+
+#footerlinks td {
+	padding-left: 30px;
+	padding-right: 30px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+#footerlinks a:visited {
+	color: white;
+}
+
+
+#socialmedia {
+	position:fixed;
+	display:inline-block;
+	text-align: center;
+	right:15%;
+	top:0%;
+	padding:10px;
+	border-radius: 5px;
+	background-color:#0ABFBC;
+}
+
+
+#socialmedia a {
+    margin:0;
+    padding:0;
+    font-size:100%;
+    border: none;
+    text-decoration: none;
+  }
+
+

@@ -6,8 +6,8 @@
 	<title>Nicolle Quintero</title>
 </head>
 <body>
-	<div class="header" onmouseover="changeHeaderColor(this)" onmouseout="revertHeaderColor(this)">
-		<div class="name" onmouseover="mOver(this)" onmouseout="mOut(this)">Nicolle Quintero</div>
+	<div class="header">
+		<div class="name">Nicolle Quintero</div>
 		<div class="byline" >This is my life in boxes.</div>
 		<div id="blogbutton"><a href="blog-posts/week1_cultural.html" onClick="alert('Hope your enjoy it!');">Read my Blog.</a></div>
 	</div>
@@ -73,53 +73,40 @@
 	</main>
 
 	<footer> 
-		<section class="listcolumn"> 
-			<h3> Links</h3>
-			<artcle class="links">
-				<a href="http:www.facebook.com">Link One</a>
-				<a href="http:www.facebook.com">Link One</a>
-				<a href="http:www.facebook.com">Link One</a>
-			</article>
-		</section>
-		<section class="listcolumn"> 
-			<h3> Links</h3>
-			<artcle class="links">
-				<a href="http:www.facebook.com">Link One</a>
-				<a href="http:www.facebook.com">Link One</a>
-				<a href="http:www.facebook.com">Link One</a>
-			</article>
-		</section>
-		<section class="listcolumn"> 
-			<h3> Links</h3>
-			<artcle class="links">
-				<a href="http:www.facebook.com">Link One</a>
-				<a href="http:www.facebook.com">Link One</a>
-				<a href="http:www.facebook.com">Link One</a>
-			</article>
-		</section>
-
-		<!--Quintero Consulting Groupe - All Rights Reserved-->
+		
+		<table id="footerlinks"> 
+			<tr>
+				<th>Favorite Websites</th>
+				<th>Charities</th>
+				<th>Social Media</th>
+			</tr>
+			<tr>
+				<td><a href="http:www.facebook.com">Link One</a></td>
+				<td><a href="http:www.facebook.com">Link One</a></td>
+				<td><a href="http:www.facebook.com">Link One</a></td>
+			</tr>
+			<tr>
+				<td><a href="http:www.facebook.com">Link Two</a></td>
+				<td><a href="http:www.facebook.com">Link Two</a></td>
+				<td><a href="http:www.facebook.com">Link Two</a></td>
+			</tr>
+			<tr>
+				<td><a href="http:www.facebook.com">Link Three</a></td>
+				<td><a href="http:www.facebook.com">Link Three</a></td>
+				<td><a href="http:www.facebook.com">Link Three</a></td>
+			</tr>
+		</table>
 	</footer>
 
+	<div id="socialmedia">
+		<a href="https://www.facebook.com/pages/Nicolle-Learns-a-New-Trick/594212237363361"><img src="blog-posts/images/facebook.png"></a>
+		<a href="https://twitter.com/facebookchica"><img src="blog-posts/images/twitter.png"></a>
+		<a href="https://plus.google.com/u/0/+NicolleQuintero/posts"><img src="blog-posts/images/googleplus.png"></a>
+		<a href="https://www.linkedin.com/in/nicollequintero"><img src="blog-posts/images/linkedin.png"></a>		
+	</div>
 </body>
 
 <script type="text/javascript">
-
-function	mOver (obj) {
-	obj.innerHTML = "Thats Me";
-}
-
-function	mOut (obj) {
-	obj.innerHTML = "Nicolle Quintero";
-}
-
-function	changeHeaderColor (obj) {
-	obj.className = 'altheader';
-}
-
-function 	revertHeaderColor (obj) {
-	obj.className = 'header';
-}
 
 function 	addThickBorder (obj) {
 	obj.className = 'thickBorder';
