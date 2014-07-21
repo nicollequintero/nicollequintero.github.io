@@ -93,6 +93,11 @@ img {
 	text-align: center;
 }
 
+.centeredimage {
+	margin-bottom: 20px;
+	margin-top: 20px;
+}
+
 #abouttext {
 	font-family: "Roboto Slab";
 	font-weight: normal;
@@ -149,10 +154,12 @@ img {
 }
 
 .entryheading {
-	font-family: "Roboto Slab";
+	font-family: "Oswald";
 	font-size: 1.25em;
 	padding-left: 30px;
 	font-weight: bold;
+	margin-top: 10px;
+	margin-bottom: 10px;
 }
 
 .entrydate {
