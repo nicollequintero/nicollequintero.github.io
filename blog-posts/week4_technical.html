@@ -50,70 +50,42 @@
 				<p class = "entrytext">
 				The map method looks through your list of data (for example, string, hash, array) and performs a block of code on every single item.
 				<br><br>
-				Let's enroll in Fitness Bootcamp! You are a gym that has a list (in this case, an array) of people who want to sign up for your classes. 
-				<br><br>
-				prospects = ["Nicolle","Sarah","Mark","Mike"]
-				<br><br>
-				The map method allows you to do something to each of those elements in your prospects. In this case, let's go ahead and print a statement that each prospect is now enrolled. Map will execute the block of code for every element of that array.
-				<br><br>
-				prospects.map { |member| puts member+" is now enrolled in Fitness Bootcamp"}
-				<br><br>
-				RESULT<br>
-				Nicolle is now enrolled in Fitness Bootcamp<br>
-				Sarah is now enrolled in Fitness Bootcamp<br>
-				Mark is now enrolled in Fitness Bootcamp<br>
-				Mike is now enrolled in Fitness Bootcamp<br><br></p>
+				Let's enroll in Fitness Bootcamp! You are a gym that has a list (in this case, an array) of people who want to sign up for your classes. <p>
+				<p class="centeredimage"><img src="images/enum1.png"/></p>
+				<p class = "entrytext">
+				The map method allows you to do something to each of those elements in your prospects. In this case, let's go ahead and print a statement that each prospect is now enrolled. Map will execute the block of code for every element of that array.</p>
+				<p class="centeredimage"><img src="images/enum2.png"/></p>
+				<p class = "entrytext">
+				RESULT</p>
+				<p class="centeredimage"><img src="images/enum3.png"/></p>
+				<p class = "entrytext">
 				<p class="entryheading">Enumerable#group_by</p>
 				<p class = "entrytext">
 				Now that we have our members enrolled, we also keep track of their fitness progress. In this instance, we've recorded how many situps each person can do in a minute. We've stored this data into a hash.
-				<br><br>
-				members = {
-					"Nicolle": 40,
-					"Sarah": 30,
-					"Mark": 50,
-					"Mike": 20
-				}
-				<br><br>
+				</p>
+				<p class="centeredimage"><img src="images/enum4.png"/></p>
+				<p class = "entrytext">
 				The group_by method allows you to group the elements in your hash by a criteria of your choosing. In our case, we want to separate those who can do 40 or more pushups in a minute, from those who cannot. We'll end up with two groups - advanced and beginner. These new terms "Advanced" and "Beginner" will be the keys in a new hash. The values to these keys will be the name and number of situps of those who fall into each category.
-				<br><br>
-				members.group_by {|person, situps| situps >=40 ? "Advanced": "Beginner"}
-				<br><br>
-				RESULT<br>
-				{"Advanced"=>[[:"Nicolle", 40], [:"Mark", 50]], "Beginner"=>[[:"Sarah", 30], [:"Mike", 20]]}</p>
-				<br><br>
+				</p>
+				<p class="centeredimage"><img src="images/enum5.png"/></p>
+				<p class = "entrytext">
+				RESULT</p>
+				<p class="centeredimage"><img src="images/enum6.png"/></p>
+				<p class = "entrytext">
 				<p class="entryheading">Enumerable#cycle</p>
 				<p class = "entrytext">
 				Let's say you have a series of exercises you want each member of Fitness Bootcamp do to. In order to give clear directions, you'll want to print out detailed directions reflecting how many times they are to do each exercise.
 				<br><br>
-				In this case, we're representing the steps to do a burpee in an array.
-				<br><br>
-				burpee_steps = ["squat with your hands on the floor in front of you","kick your feet back to plank position", "return your feet to the squat positions", "leap up as high as possible"]
-				<br><br>
-				The cycle method allows you to execute a block of code for each element in your array any number of times you desire. If I want my members to do 10 burpees, then I'll cycle through the array 10 times and print each step along the way.
-				<br><br>
-				burpee_steps.cycle(5) { |step| puts step } 
-				<br><br>
+				In this case, we're representing the steps to do a burpee in an array.</p>
+				<p class="centeredimage"><img src="images/enum7.png"/></p>
+				<p class = "entrytext">
+				The cycle method allows you to execute a block of code for each element in your array any number of times you desire. If I want my members to do 10 burpees, then I'll cycle through the array 10 times and print each step along the way.</p>
+				<p class="centeredimage"><img src="images/enum8.png"/></p>
+				<p class = "entrytext">
 				RESULT
-				<br>squat with your hands on the floor in front of you
-				<br>kick your feet back to plank position
-				<br>return your feet to the squat positions
-				<br>leap up as high as possible
-				<br>squat with your hands on the floor in front of you
-				<br>kick your feet back to plank position
-				<br>return your feet to the squat positions
-				<br>leap up as high as possible
-				<br>squat with your hands on the floor in front of you
-				<br>kick your feet back to plank position
-				<br>return your feet to the squat positions
-				<br>leap up as high as possible
-				<br>squat with your hands on the floor in front of you
-				<br>kick your feet back to plank position
-				<br>return your feet to the squat positions
-				<br>leap up as high as possible
-				<br>squat with your hands on the floor in front of you
-				<br>kick your feet back to plank position
-				<br>return your feet to the squat positions
-				<br>leap up as high as possible
+				</p>
+				<p class="centeredimage"><img src="images/enum9.png"/></p>
+			
 			</p>
 
 		</main> <!--End of content-->
