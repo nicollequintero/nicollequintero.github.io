@@ -1,0 +1,110 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<link type:"text/css" rel="stylesheet" href="blog.css"/>
+	<link href='http://fonts.googleapis.com/css?family=Oswald:700|Roboto+Slab:300' rel='stylesheet' type='text/css'>
+	<title>One Day at a Time</title>
+	<meta name="description" content="Musings on doing the impossible">
+	<meta name="viewport" content="width=device-width, initial-scale =1.0, user-scalable =no">
+</head>
+<body>
+
+
+
+	<header>
+		<div class="name">Nicolle Quintero</div>
+		<div class="byline" >One Day at a Time</div>
+	</header>
+
+	<div id="container">
+		<aside>
+			<div id="socialmedia">
+				<a href="https://www.facebook.com/pages/Nicolle-Learns-a-New-Trick/594212237363361" target="_blank"><img src="images/facebook.png"></a>
+				<a href="https://twitter.com/facebookchica" target="_blank"><img src="images/twitter.png"></a>
+				<a href="https://plus.google.com/u/0/+NicolleQuintero/posts" target="_blank"><img src="images/googleplus.png"></a>
+				<a href="https://www.linkedin.com/in/nicollequintero" target="_blank"><img src="images/linkedin.png"></a>	
+			</div>
+
+			<p id="authorimage"><img src="images/nicolle-circle.png"/></p>
+			<p id="abouttext">Former sales manager trying to make it to the other side of the office. Follow me as I struggle to become right-brained again.</p>
+			<div id="gamebutton"><a href="http://nicollequintero.github.io/unit1_projects/game/play2.html" target="_blank">Play my game</a></div>
+			<p id="recentpostsheader">Recent Posts</p>
+			<p class="bloglink"><a href="week5_cultural.html">Not your average group work</a></p>
+			<p class="selectedbloglink">Building Humans</p>
+			<p class="bloglink"><a href="week4_cultural.html">Where my ladies at?</a></p>
+			<p class="bloglink"><a href="week4_technical.html">Enumerating Fitness Bootcamp</a></p>
+			<p class="bloglink"><a href="week3_cultural.html">Learning to Think</a></p>
+			<p class="bloglink"><a href="week3_technical.html">So what's the deal with Javascipt?</a></p>
+			<p class="bloglink"><a href="week3_cultural.html">Hanging the Mona Lisa</a></p>
+			<p class="bloglink"><a href="week1_cultural.html">Fire in the Kitchen</a></p>
+			<p class="bloglink"><a href="week1_technical.html">What's in a Design?</a></p>
+		</aside> <!--End of sidemenu-->
+
+		<main>
+
+		
+			<p class="entrytitle"> Building Humans </p>
+			<p class = "entrydate"> July 27, 2014</p>
+
+			<p class = "entrytext">
+				Classes are an incredibly powerful way to hold, represent and manipulate data in Ruby. In order to introduce you to classes, let's build some Humans. (I promise it won't be as scary as that sounds.)</p>
+				<p class="centeredimage"><img src="images/class_step1.png"/></p>
+				<p class = "entrytext">
+				We start off by declaring the class. At the bare minimum you probably want a method called initialize  that instructs ruby what to do when you want start building a human. A less Frankenstein-y and more Ruby way to say that is “when you want to create an instance of your class”. In this case, we're requiring that in order to create an instance of the Human class, you provide a name, age, and gender.
+				<br><br>
+				You'll notice that in the method, we're doing something with all of the arguments passed. In essence, we're creating a variables for each and setting them equal to the value passed. But because variables like name, age and gender are surely to be used elsewhere as we build out our class, we added @ in front of the variable names. Declaring variables in this way makes them instance variables, which means we can use them later in other methods we build out.
+				<br><br>
+				There are a lot of exciting things that Humans can do. Luckily, classes allow us to reflect that rich behavior by building as many methods inside the class, instance methods, as we desire. They can be as complicated or as simple as any other method you've created - it's all up to you!</p>
+				<p class="centeredimage"><img src="images/class_step2.png"/></p>
+				<p class = "entrytext">
+				We created a method that gives our Human a favorite color. The select_fave_color method has a list of colors stored in an array. Calling the method selects a random sample of that array and makes that the favorite color.</p>
+				<p class="centeredimage"><img src="images/class_step3.png"/></p>
+				<p class = "entrytext">
+				Now let's say that later in our program we need to be reminded of what name, age and gender we gave our Human. Above you'll see we added three methods that when called, simply return the value desired. While they're simple enough to implement, you could imagine how unwieldy that'd get in a more complicated class with a lot of variables. Luckily Ruby gives us a more concise way of doing the same thing (of course it does!). Take a look:</p>
+				<p class="centeredimage"><img src="images/class_step4.png"/></p>
+				<p class = "entrytext">
+				You'll notice we condensed those three methods into one line. The attr_reader line essentially creates those methods on the backend for us. Ruby will look for the instance variables of the same name and return their value. Easy peazy! Now let's move on to our final lesson.
+				<br><br>
+				There are a ton of methods we could build to reflect the cool things a Human might do - get a job, marry another Human, change location etc. But there are also some basic functions inherent to all living beings. As luck would have it, let's say you had recently built a class, Animal, that reflected the more primal part of our nature. It has methods for eating, sleeping, pooping (sorry, had to go there!), etc. Ruby allows you to put all that goodness to use in your Human class without duplicating code. Here's what I mean:</p>
+				<p class="centeredimage"><img src="images/class_step5.png"/></p>
+				<p class = "entrytext">
+				You can use inheritance in order to create a subclass of another class. In this case, Human is a subclass of Animal, so it inherits everything from the Animal class. All we had to do is change the class definition line. Then, in order to make sure of the food_eaten variable, we set it to 0 once a Human is initialized. 
+				<br><br>
+				Now let's sit back and watch the magic happen:</p>
+				<p class="centeredimage">
+					<img src="images/class_step6.png"/>
+					<img src="images/class_step7.png"/>
+				</p>
+
+		</main> <!--End of content-->
+		<div id="clearfooter"></div>
+	</div>
+
+	<footer> 
+		
+		<table id="footerlinks"> 
+			<tr>
+				<th>Fun</th>
+				<th>Giving</th>
+				<th>Essentials</th>
+			</tr>
+			<tr>
+				<td><a href="http://www.buzzfeed.com" target="_blank">BuzzFeed</a></td>
+				<td><a href="http://www.kiva.org" target="_blank">Kiva</a></td>
+				<td><a href="http://www.rdio.com" target="_blank">Rdio</a></td>
+			</tr>
+			<tr>
+				<td><a href="http://www.nytimes.com/top/features/style/fashionandstyle/columns/modernlove/index.html" target="_blank">Modern Love</a></td>
+				<td><a href="http://www.globalgiving.org" target="_blank">Global Giving</a></td>
+				<td><a href="http://www.houzz.com" target="_blank">Houzz</a></td>
+			</tr>
+			<tr>
+				<td><a href="http://www.netflix.com" target="_blank">Netflix</a></td>
+				<td><a href="http://www.gofundme.com" target="_blank">GoFundMe</a></td>
+				<td><a href="http://www.instagram.com" target="_blank">Instagram</a></td>
+			</tr>
+		</table>
+	</footer>
+
+</body>
+</html>
