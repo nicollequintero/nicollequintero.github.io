@@ -9,7 +9,7 @@ abbr, address, cite, code,
 del, dfn, em, img, ins, kbd, q, samp,
 small, strong, sub, sup, var,
 b, i,
-dl, dt, dd, ol, ul, li,
+dl, dt, dd, ol,
 fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
 article, aside, canvas, details, figcaption, figure,
@@ -168,10 +168,24 @@ header {
 	padding-bottom: .5em;
 }
 
-.entrytext {
+.entrytext, ul, li {
 	font-family: "Roboto Slab";
 	font-size: 1em;
 	padding-left: 30px;
+}
+
+ ul, li {
+ 	list-style: disc inside none;
+}
+
+.entrytext a {
+	text-decoration: underline;
+	color: #0ABFBC;
+}
+
+.entrytext a:visited {
+	text-decoration: underline;
+	color: #0ABFBC;
 }
 
 .entryheading {
