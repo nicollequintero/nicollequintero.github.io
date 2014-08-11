@@ -1,0 +1,109 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<link type:"text/css" rel="stylesheet" href="blog.css"/>
+	<link href='http://fonts.googleapis.com/css?family=Oswald:700|Roboto+Slab:300' rel='stylesheet' type='text/css'>
+	<title>One Day at a Time</title>
+	<meta name="description" content="Musings on doing the impossible">
+	<meta name="viewport" content="width=device-width, initial-scale =1.0, user-scalable =no">
+</head>
+<body>
+
+
+
+	<header>
+		<div class="name">Nicolle Quintero</div>
+		<div class="byline" >One Day at a Time</div>
+	</header>
+
+	<div id="container">
+		<aside>
+			<div id="socialmedia">
+				<a href="https://www.facebook.com/pages/Nicolle-Learns-a-New-Trick/594212237363361" target="_blank"><img src="images/facebook.png"></a>
+				<a href="https://twitter.com/facebookchica" target="_blank"><img src="images/twitter.png"></a>
+				<a href="https://plus.google.com/u/0/+NicolleQuintero/posts" target="_blank"><img src="images/googleplus.png"></a>
+				<a href="https://www.linkedin.com/in/nicollequintero" target="_blank"><img src="images/linkedin.png"></a>	
+			</div>
+
+			<p id="authorimage"><img src="images/nicolle-circle.png"/></p>
+			<p id="abouttext">Former sales manager trying to make it to the other side of the office. Follow me as I struggle to become right-brained again.</p>
+			<div id="gamebutton"><a href="http://nicollequintero.github.io/unit1_projects/game/play2.html" target="_blank">Play my game</a></div>
+			<p id="recentpostsheader">Recent Posts</p>
+			<p class="selectedbloglink">I'm a hacker now</p>
+			<p class="bloglink"><a href="week6_cultural.html">Ignorance was Bliss</p>
+			<p class="bloglink"><a href="week6_technical.html">Hello (Object Oriented) World</p>
+			<p class="bloglink"><a href="week5_cultural.html">Not your average group work</a></p>
+			<p class="bloglink"><a href="week5_technical.html">Building Humans</p>
+			<p class="bloglink"><a href="week4_cultural.html">Where my ladies at?</a></p>
+			<p class="bloglink"><a href="week4_technical.html">Enumerating Fitness Bootcamp</a></p>
+			<p class="bloglink"><a href="week3_cultural.html">Learning to Think</a></p>
+			<p class="bloglink"><a href="week3_technical.html">So what's the deal with Javascipt?</a></p>
+			<p class="bloglink"><a href="week3_cultural.html">Hanging the Mona Lisa</a></p>
+			<p class="bloglink"><a href="week1_cultural.html">Fire in the Kitchen</a></p>
+			<p class="bloglink"><a href="week1_technical.html">What's in a Design?</a></p>
+		</aside> <!--End of sidemenu-->
+
+		<main>
+
+		
+			<p class="entrytitle"> I'm a Hacker Now</p>
+			<p class = "entrydate"> August 10, 2014</p>
+
+			<p class = "entrytext">
+				That was my first thought when I learned about SQL injection - "wow, I can hack into websites now". Disclaimer: I don't actually intend to do this and would probably be hard pressed to find a worthwhile site vulnerable to this hacking... But it is rewarding to further my coding knowledge and understand how vulnerabilities arise.
+				<br><br>
+				In essense, SQL injection is the ability to manipulate backend SQL queries in a way that causes unintended access to the data at hand. The most popular example of this is entering characters into the username or password field of a website that, once implemented into the backend query, makes the query evaluate to true without really having the proper username/password combination. For example:
+				<br><br>
+				<code>
+				<var>user_name</var> = " or ""="<br>
+				<var>password</var> = " or ""="<br>
+				<br>
+				sql = "SELECT * FROM Users WHERE Name ='" + user_name + "' AND Pass ='" + password + "'"
+				<br><br>
+				<em>#once the variables are injected, the SQL statement becomes</em><br>
+				SELECT * FROM Users WHERE Name ="" or ""="" AND Pass ="" or ""=""
+				</code>
+				<br><br>
+				Because the latter part of the OR statements (space equals space) will evaluate to true, the select statement will return all data from the Users table. Of course, getting the characters right means fiddling around to guess at how the SQL backend statement is written exactly, but it takes little exploring for a seasoned hacker to arrive at an intelligent guess. 
+				<br><br>
+				Some strategies to combat the potential side effects of SQL injection are:</p>
+				<ul>
+					<li>Limit the characters that can be entered into fields like username and password. For example, not allowing quotes or equals signs or certain strings.</li>
+					<li>Sanitizing your data, meaning that if you don't limit things like single quotes because you want to allow Mr. O'Malley to enter his name properly, you can at least clean the data up afterwards. Insert escape characters before quotes, for example, which will break up the syntax and not result in SQL injection.</li>
+					<li>Don't use dynamic SQL, use prepared statements instead. Prepared statements are basically templates for your SQL statements so that the user input isn't being inserted directly into your query.</li>
+				</ul>
+				<p class = "entrytext">Be safe out there, folks!
+				</p> 
+
+		</main> <!--End of content-->
+		<div id="clearfooter"></div>
+	</div>
+
+	<footer> 
+		
+		<table id="footerlinks"> 
+			<tr>
+				<th>Fun</th>
+				<th>Giving</th>
+				<th>Essentials</th>
+			</tr>
+			<tr>
+				<td><a href="http://www.buzzfeed.com" target="_blank">BuzzFeed</a></td>
+				<td><a href="http://www.kiva.org" target="_blank">Kiva</a></td>
+				<td><a href="http://www.rdio.com" target="_blank">Rdio</a></td>
+			</tr>
+			<tr>
+				<td><a href="http://www.nytimes.com/top/features/style/fashionandstyle/columns/modernlove/index.html" target="_blank">Modern Love</a></td>
+				<td><a href="http://www.globalgiving.org" target="_blank">Global Giving</a></td>
+				<td><a href="http://www.houzz.com" target="_blank">Houzz</a></td>
+			</tr>
+			<tr>
+				<td><a href="http://www.netflix.com" target="_blank">Netflix</a></td>
+				<td><a href="http://www.gofundme.com" target="_blank">GoFundMe</a></td>
+				<td><a href="http://www.instagram.com" target="_blank">Instagram</a></td>
+			</tr>
+		</table>
+	</footer>
+
+</body>
+</html>
