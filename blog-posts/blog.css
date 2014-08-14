@@ -346,6 +346,10 @@ body {
 
 }
 
+#recentposts {
+	display: none;
+}
+
 #gamebutton, #authorimage, #abouttext, footer {
 	display: none;
 }

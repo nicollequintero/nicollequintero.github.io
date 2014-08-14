@@ -6,6 +6,8 @@
 	<title>One Day at a Time</title>
 	<meta name="description" content="Musings on doing the impossible">
 	<meta name="viewport" content="width=device-width, initial-scale =1.0, user-scalable =no">
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
 </head>
 <body>
 
@@ -28,16 +30,18 @@
 			<p id="authorimage"><img src="images/nicolle-circle.png"/></p>
 			<p id="abouttext">Former sales manager trying to make it to the other side of the office. Follow me as I struggle to become right-brained again.</p>
 			<div id="gamebutton"><a href="http://nicollequintero.github.io/unit1_projects/game/play2.html" target="_blank">Play my game</a></div>
-			<p id="recentpostsheader">Recent Posts</p>
-			<p class="bloglink"><a href="week5_cultural.html">Not your average group work</a></p>
-			<p class="bloglink"><a href="week5_technical.html">Building Humans</a></p>
-			<p class="bloglink"><a href="week4_cultural.html">Where my ladies at?</a></p>
-			<p class="bloglink"><a href="week4_technical.html">Enumerating Fitness Bootcamp</a></p>
-			<p class="bloglink"><a href="week3_cultural.html">Learning to Think</a></p>
-			<p class="bloglink"><a href="week3_technical.html">So what's the deal with Javascipt?</a></p>
-			<p class="bloglink"><a href="week2_technical.html">Hanging the Mona Lisa</a></p>
-			<p class="bloglink"><a href="week1_cultural.html">Fire in the Kitchen</a></p>
-			<p class="selectedbloglink">What's in a Design?</p>
+			<div id="recentpostsheader">Recent Posts</div>
+			<div id="recentposts">
+				<p class="bloglink"><a href="week5_cultural.html">Not your average group work</a></p>
+				<p class="bloglink"><a href="week5_technical.html">Building Humans</a></p>
+				<p class="bloglink"><a href="week4_cultural.html">Where my ladies at?</a></p>
+				<p class="bloglink"><a href="week4_technical.html">Enumerating Fitness Bootcamp</a></p>
+				<p class="bloglink"><a href="week3_cultural.html">Learning to Think</a></p>
+				<p class="bloglink"><a href="week3_technical.html">So what's the deal with Javascipt?</a></p>
+				<p class="bloglink"><a href="week2_technical.html">Hanging the Mona Lisa</a></p>
+				<p class="bloglink"><a href="week1_cultural.html">Fire in the Kitchen</a></p>
+				<p class="selectedbloglink">What's in a Design?</p>
+			</div>
 		</aside> <!--End of sidemenu-->
 
 		<main>
@@ -115,4 +119,19 @@
 	</footer>
 
 </body>
+
+<script>
+
+$(document).ready(function(){
+
+
+    $('#recentpostsheader').click(function(){
+
+    	$('#recentposts').slideToggle('slow');
+    });
+
+});
+
+</script>
+
 </html>
